@@ -1,0 +1,16 @@
+[
+{
+  "modid": "caskearmor",
+  "name": "Caske Armor",
+  "description": "Caske Armor placeholder description.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Caske2000"],
+  "credits": "Logic will get you from A to B. Imagination will take you everywhere. -Albert Einstein",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
