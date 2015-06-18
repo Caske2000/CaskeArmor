@@ -1,36 +1,30 @@
-[20:29:41] [main/INFO]: Setting user: Player119
-[20:29:43] [Client thread/INFO]: LWJGL Version: 2.9.1
-[20:29:48] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Caske Armor
-[20:29:48] [Sound Library Loader/INFO]: Sound engine started
-[20:29:50] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[20:29:50] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[20:29:51] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Caske Armor
-[20:29:51] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[20:29:51] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[20:29:52] [Sound Library Loader/INFO]: Sound engine started
-[20:29:53] [Client thread/ERROR]: ########## GL ERROR ##########
-[20:29:53] [Client thread/ERROR]: @ Post startup
-[20:29:53] [Client thread/ERROR]: 1286: Invalid framebuffer operation
-[20:29:55] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[20:29:55] [Server thread/INFO]: Generating keypair
-[20:29:56] [Server thread/INFO]: Preparing start region for level 0
-[20:29:56] [Server thread/INFO]: Changing view distance to 12, from 10
-[20:29:57] [Server thread/INFO]: Player119[local:E:0adc9e93] logged in with entity id 0 at (-233.40469755206536, 56.0, 818.6554406780923)
-[20:29:57] [Server thread/INFO]: Player119 joined the game
-[20:29:59] [Server thread/INFO]: Player119 has just earned the achievement [Taking Inventory]
-[20:30:00] [Client thread/INFO]: [CHAT] Player119 has just earned the achievement [Taking Inventory]
-[20:30:03] [Server thread/INFO]: Saving and pausing game...
-[20:30:03] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[20:30:03] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[20:30:03] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[20:30:06] [Server thread/INFO]: Saving and pausing game...
-[20:30:06] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[20:30:06] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[20:30:06] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[20:30:07] [Server thread/INFO]: Stopping server
-[20:30:07] [Server thread/INFO]: Saving players
-[20:30:07] [Server thread/INFO]: Saving worlds
-[20:30:07] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[20:30:07] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[20:30:07] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[20:30:08] [Client thread/INFO]: Stopping!
+[20:33:04] [main/INFO]: Setting user: Player111
+[20:33:06] [Client thread/INFO]: LWJGL Version: 2.9.1
+[20:33:13] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Caske Armor
+[20:33:14] [Sound Library Loader/INFO]: Sound engine started
+[20:33:16] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[20:33:16] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[20:33:16] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Caske Armor
+[20:33:16] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[20:33:16] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[20:33:17] [Sound Library Loader/INFO]: Sound engine started
+[20:33:18] [Client thread/ERROR]: ########## GL ERROR ##########
+[20:33:18] [Client thread/ERROR]: @ Post startup
+[20:33:18] [Client thread/ERROR]: 1286: Invalid framebuffer operation
+[20:33:21] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[20:33:21] [Server thread/INFO]: Generating keypair
+[20:33:21] [Server thread/INFO]: Preparing start region for level 0
+[20:33:21] [Server thread/INFO]: Changing view distance to 12, from 10
+[20:33:22] [Server thread/INFO]: Player111[local:E:21366e03] logged in with entity id 0 at (-233.40469755206536, 56.0, 818.6554406780923)
+[20:33:22] [Server thread/INFO]: Player111 joined the game
+[20:33:25] [Server thread/INFO]: Saving and pausing game...
+[20:33:25] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[20:33:25] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[20:33:25] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[20:33:25] [Server thread/INFO]: Stopping server
+[20:33:25] [Server thread/INFO]: Saving players
+[20:33:25] [Server thread/INFO]: Saving worlds
+[20:33:25] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[20:33:26] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[20:33:26] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[20:33:27] [Client thread/INFO]: Stopping!
