@@ -8,7 +8,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 public class CommonProxy {
 
     public void preInit(FMLPreInitializationEvent e) {
-        ModItems.init();
+        ModItems.preInit();
     }
 
     public void init(FMLInitializationEvent e) {

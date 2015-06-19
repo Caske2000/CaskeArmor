@@ -7,4 +7,8 @@ public class Reference {
 
     public static final String COMMON_PROXY = "com.caske2000.caskearmor.proxy.CommonProxy";
     public static final String CLIENT_PROXY = "com.caske2000.caskearmor.proxy.ClientProxy";
+
+    public static final class Names {
+        public static final String TEST_CHEST = "testChest";
+    }
 }
