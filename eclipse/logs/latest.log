@@ -1,30 +1,56 @@
-[20:33:04] [main/INFO]: Setting user: Player111
-[20:33:06] [Client thread/INFO]: LWJGL Version: 2.9.1
-[20:33:13] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Caske Armor
-[20:33:14] [Sound Library Loader/INFO]: Sound engine started
-[20:33:16] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[20:33:16] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[20:33:16] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Caske Armor
-[20:33:16] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[20:33:16] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[20:33:17] [Sound Library Loader/INFO]: Sound engine started
-[20:33:18] [Client thread/ERROR]: ########## GL ERROR ##########
-[20:33:18] [Client thread/ERROR]: @ Post startup
-[20:33:18] [Client thread/ERROR]: 1286: Invalid framebuffer operation
-[20:33:21] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[20:33:21] [Server thread/INFO]: Generating keypair
-[20:33:21] [Server thread/INFO]: Preparing start region for level 0
-[20:33:21] [Server thread/INFO]: Changing view distance to 12, from 10
-[20:33:22] [Server thread/INFO]: Player111[local:E:21366e03] logged in with entity id 0 at (-233.40469755206536, 56.0, 818.6554406780923)
-[20:33:22] [Server thread/INFO]: Player111 joined the game
-[20:33:25] [Server thread/INFO]: Saving and pausing game...
-[20:33:25] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[20:33:25] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[20:33:25] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[20:33:25] [Server thread/INFO]: Stopping server
-[20:33:25] [Server thread/INFO]: Saving players
-[20:33:25] [Server thread/INFO]: Saving worlds
-[20:33:25] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[20:33:26] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[20:33:26] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[20:33:27] [Client thread/INFO]: Stopping!
+[14:05:32] [main/INFO]: Setting user: Player94
+[14:05:34] [Client thread/INFO]: LWJGL Version: 2.9.1
+[14:05:40] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Caske Armor, FMLFileResourcePack:CoFH Core, FMLFileResourcePack:Thermal Dynamics, FMLFileResourcePack:Thermal Expansion, FMLFileResourcePack:Thermal Foundation
+[14:05:42] [Sound Library Loader/INFO]: Sound engine started
+[14:05:44] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/ambient.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzAmbient
+[14:05:44] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/attack.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzAttack
+[14:05:44] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/breathe0.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzBreathe0
+[14:05:44] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/breathe1.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzBreathe1
+[14:05:44] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/breathe2.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzBreathe2
+[14:05:44] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/ambient.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzAmbient
+[14:05:44] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/attack.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzAttack
+[14:05:44] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/breathe0.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzBreathe0
+[14:05:44] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/breathe1.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzBreathe1
+[14:05:44] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/breathe2.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzBreathe2
+[14:05:44] [Client thread/INFO]: Created: 512x512 textures/blocks-atlas
+[14:05:45] [Client thread/INFO]: Created: 512x256 textures/items-atlas
+[14:05:46] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Caske Armor, FMLFileResourcePack:CoFH Core, FMLFileResourcePack:Thermal Dynamics, FMLFileResourcePack:Thermal Expansion, FMLFileResourcePack:Thermal Foundation
+[14:05:47] [Client thread/INFO]: Created: 512x512 textures/blocks-atlas
+[14:05:47] [Client thread/INFO]: Created: 512x512 textures/items-atlas
+[14:05:48] [Sound Library Loader/INFO]: Sound engine started
+[14:05:49] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/ambient.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzAmbient
+[14:05:49] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/attack.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzAttack
+[14:05:49] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/breathe0.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzBreathe0
+[14:05:49] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/breathe1.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzBreathe1
+[14:05:49] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/breathe2.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzBreathe2
+[14:05:49] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/ambient.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzAmbient
+[14:05:49] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/attack.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzAttack
+[14:05:49] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/breathe0.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzBreathe0
+[14:05:49] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/breathe1.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzBreathe1
+[14:05:49] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/breathe2.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzBreathe2
+[14:05:49] [Client thread/ERROR]: ########## GL ERROR ##########
+[14:05:49] [Client thread/ERROR]: @ Post startup
+[14:05:49] [Client thread/ERROR]: 1286: Invalid framebuffer operation
+[14:06:01] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[14:06:01] [Server thread/INFO]: Generating keypair
+[14:06:01] [Server thread/INFO]: Preparing start region for level 0
+[14:06:02] [Server thread/INFO]: Changing view distance to 12, from 10
+[14:06:02] [Server thread/INFO]: Player94[local:E:0b8ee55b] logged in with entity id 1 at (-233.40469755206536, 56.0, 818.6554406780923)
+[14:06:02] [Server thread/INFO]: Player94 joined the game
+[14:06:03] [Server thread/INFO]: Saving and pausing game...
+[14:06:03] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[14:06:03] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[14:06:03] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[14:06:04] [Server thread/INFO]: Player94 has just earned the achievement [Taking Inventory]
+[14:06:04] [Client thread/INFO]: [CHAT] Player94 has just earned the achievement [Taking Inventory]
+[14:06:12] [Server thread/INFO]: Saving and pausing game...
+[14:06:12] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[14:06:12] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[14:06:12] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[14:06:13] [Server thread/INFO]: Stopping server
+[14:06:13] [Server thread/INFO]: Saving players
+[14:06:13] [Server thread/INFO]: Saving worlds
+[14:06:13] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[14:06:13] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[14:06:13] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[14:06:14] [Client thread/INFO]: Stopping!
