@@ -8,7 +8,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.ID)
+@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.ID, dependencies = Reference.DEPENDENCIES)
 public class CaskeArmor
 {
 
