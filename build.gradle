@@ -17,18 +17,19 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "${mc_version}-1.0"
+version = "${mc_version}-0.1.1"
 group= "com.caske2000.caskearmor" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "caskearmor"
 
 minecraft {
-    version = "1.7.10-10.13.4.1456-1.7.10"
+    version = "1.7.10-10.13.4.1472-1.7.10"
     runDir = "eclipse"
 }
 
 repositories {
     maven { url = "http://chickenbones.net/maven/" }
 }
+
 dependencies {
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
@@ -68,8 +69,10 @@ processResources
         exclude 'mcmod.info'
     }
 }
+
 idea {
     module {
         inheritOutputDirs = true
     }
 }
+

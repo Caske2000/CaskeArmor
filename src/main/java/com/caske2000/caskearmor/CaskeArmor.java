@@ -20,6 +20,7 @@ public class CaskeArmor
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent e) {
+        
         proxy.preInit(e);
     }
 
