@@ -1,5 +1,6 @@
 package com.caske2000.caskearmor.creativetab;
 
+import com.caske2000.caskearmor.item.ModItems;
 import com.caske2000.caskearmor.lib.Reference;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
@@ -11,7 +12,7 @@ public class CreativeTab {
         @Override
         public Item getTabIconItem()
         {
-            return Items.boat;
+            return ModItems.leadstoneChest;
         }
     };
 }

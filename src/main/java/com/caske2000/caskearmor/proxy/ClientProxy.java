@@ -1,8 +1,10 @@
 package com.caske2000.caskearmor.proxy;
 
+import com.caske2000.caskearmor.handler.HUDHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.common.MinecraftForge;
 
 public class ClientProxy extends CommonProxy {
 
@@ -11,6 +13,7 @@ public class ClientProxy extends CommonProxy {
     }
 
     public void init(FMLInitializationEvent e) {
+        MinecraftForge.EVENT_BUS.register(HUDHandler.instance);
         super.init(e);
     }
 

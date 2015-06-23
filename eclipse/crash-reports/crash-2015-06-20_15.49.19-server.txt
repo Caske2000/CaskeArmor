@@ -1,0 +1,130 @@
+---- Minecraft Crash Report ----
+// Oh - I know what I did wrong!
+
+Time: 20/06/15 15:49
+Description: Ticking entity
+
+java.lang.NullPointerException: Ticking entity
+	at net.minecraftforge.common.ISpecialArmor$ArmorProperties.ApplyArmor(ISpecialArmor.java:112)
+	at net.minecraft.entity.player.EntityPlayer.damageEntity(EntityPlayer.java:1225)
+	at net.minecraft.entity.EntityLivingBase.attackEntityFrom(EntityLivingBase.java:870)
+	at net.minecraft.entity.player.EntityPlayer.attackEntityFrom(EntityPlayer.java:1161)
+	at net.minecraft.entity.player.EntityPlayerMP.attackEntityFrom(EntityPlayerMP.java:532)
+	at net.minecraft.entity.monster.EntityMob.attackEntityAsMob(EntityMob.java:140)
+	at net.minecraft.entity.monster.EntityZombie.attackEntityAsMob(EntityZombie.java:340)
+	at net.minecraft.entity.ai.EntityAIAttackOnCollide.updateTask(EntityAIAttackOnCollide.java:167)
+	at net.minecraft.entity.ai.EntityAITasks.onUpdateTasks(EntityAITasks.java:125)
+	at net.minecraft.entity.EntityLiving.updateAITasks(EntityLiving.java:613)
+	at net.minecraft.entity.EntityLivingBase.onLivingUpdate(EntityLivingBase.java:1983)
+	at net.minecraft.entity.EntityLiving.onLivingUpdate(EntityLiving.java:431)
+	at net.minecraft.entity.monster.EntityMob.onLivingUpdate(EntityMob.java:39)
+	at net.minecraft.entity.monster.EntityZombie.onLivingUpdate(EntityZombie.java:243)
+	at net.minecraft.entity.EntityLivingBase.onUpdate(EntityLivingBase.java:1816)
+	at net.minecraft.entity.EntityLiving.onUpdate(EntityLiving.java:250)
+	at net.minecraft.entity.monster.EntityMob.onUpdate(EntityMob.java:47)
+	at net.minecraft.entity.monster.EntityZombie.onUpdate(EntityZombie.java:335)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2298)
+	at net.minecraft.world.WorldServer.updateEntityWithOptionalForce(WorldServer.java:684)
+	at net.minecraft.world.World.updateEntity(World.java:2258)
+	at net.minecraft.world.World.updateEntities(World.java:2108)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:515)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:703)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraftforge.common.ISpecialArmor$ArmorProperties.ApplyArmor(ISpecialArmor.java:112)
+	at net.minecraft.entity.player.EntityPlayer.damageEntity(EntityPlayer.java:1225)
+	at net.minecraft.entity.EntityLivingBase.attackEntityFrom(EntityLivingBase.java:870)
+	at net.minecraft.entity.player.EntityPlayer.attackEntityFrom(EntityPlayer.java:1161)
+	at net.minecraft.entity.player.EntityPlayerMP.attackEntityFrom(EntityPlayerMP.java:532)
+	at net.minecraft.entity.monster.EntityMob.attackEntityAsMob(EntityMob.java:140)
+	at net.minecraft.entity.monster.EntityZombie.attackEntityAsMob(EntityZombie.java:340)
+	at net.minecraft.entity.ai.EntityAIAttackOnCollide.updateTask(EntityAIAttackOnCollide.java:167)
+	at net.minecraft.entity.ai.EntityAITasks.onUpdateTasks(EntityAITasks.java:125)
+	at net.minecraft.entity.EntityLiving.updateAITasks(EntityLiving.java:613)
+	at net.minecraft.entity.EntityLivingBase.onLivingUpdate(EntityLivingBase.java:1983)
+	at net.minecraft.entity.EntityLiving.onLivingUpdate(EntityLiving.java:431)
+	at net.minecraft.entity.monster.EntityMob.onLivingUpdate(EntityMob.java:39)
+	at net.minecraft.entity.monster.EntityZombie.onLivingUpdate(EntityZombie.java:243)
+	at net.minecraft.entity.EntityLivingBase.onUpdate(EntityLivingBase.java:1816)
+	at net.minecraft.entity.EntityLiving.onUpdate(EntityLiving.java:250)
+	at net.minecraft.entity.monster.EntityMob.onUpdate(EntityMob.java:47)
+	at net.minecraft.entity.monster.EntityZombie.onUpdate(EntityZombie.java:335)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2298)
+	at net.minecraft.world.WorldServer.updateEntityWithOptionalForce(WorldServer.java:684)
+	at net.minecraft.world.World.updateEntity(World.java:2258)
+
+-- Entity being ticked --
+Details:
+	Entity Type: Zombie (net.minecraft.entity.monster.EntityZombie)
+	Entity ID: 5
+	Entity Name: Zombie
+	Entity's Exact location: -236.01, 56.00, 823.50
+	Entity's Block location: World: (-237,56,823), Chunk: (at 3,3,7 in -15,51; contains blocks -240,0,816 to -225,255,831), Region: (-1,1; contains chunks -32,32 to -1,63, blocks -512,0,512 to -1,255,1023)
+	Entity's Momentum: 0.00, -0.08, 0.00
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:2108)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:515)
+
+-- Affected level --
+Details:
+	Level name: New World
+	All players: 1 total; [EntityPlayerMP['Player931'/7, l='New World', x=-236.99, y=56.00, z=822.46]]
+	Chunk stats: ServerChunkCache: 651 Drop: 0
+	Level seed: 9095710601853105478
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 2;7,3x1,52x24;2;
+	Level spawn location: World: (-241,4,821), Chunk: (at 15,0,5 in -16,51; contains blocks -256,0,816 to -241,255,831), Region: (-1,1; contains chunks -32,32 to -1,63, blocks -512,0,512 to -1,255,1023)
+	Level time: 31912 game time, 30006 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 137958 (now: false), thunder time: 10349 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:703)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 8.1 (amd64) version 6.3
+	Java Version: 1.8.0_45, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 756489992 bytes (721 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1456 11 mods loaded, 11 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1456-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1456} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1456-1.7.10.jar) 
+	UCHIJAAAA	NotEnoughItems{1.0.5.111} [Not Enough Items] (NotEnoughItems-1.7.10-1.0.5.111-dev.jar) 
+	UCHIJAAAA	CodeChickenCore{1.0.7.46} [CodeChicken Core] (minecraft.jar) 
+	UCHIJAAAA	<CoFH ASM>{000} [CoFH ASM] (minecraft.jar) 
+	UCHIJAAAA	CoFHCore{1.7.10R3.0.2} [CoFH Core] (CoFHCore-[1.7.10]3.0.2-283-dev.jar) 
+	UCHIJAAAA	caskearmor{1.7.10-1.0} [Caske Armor] (CaskeArmor) 
+	UCHIJAAAA	ThermalFoundation{1.7.10R1.0.0} [Thermal Foundation] (ThermalFoundation-[1.7.10]1.0.0-88-dev.jar) 
+	UCHIJAAAA	ThermalDynamics{1.7.10R1.0.0} [Thermal Dynamics] (ThermalDynamics-[1.7.10]1.0.0-130-dev.jar) 
+	UCHIJAAAA	ThermalExpansion{1.7.10R4.0.0} [Thermal Expansion] (ThermalExpansion-[1.7.10]4.0.0-176-dev.jar) 
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	CoFHCore: -[1.7.10]3.0.2-283
+	ThermalFoundation: -[1.7.10]1.0.0-88
+	ThermalDynamics: -[1.7.10]1.0.0-130
+	ThermalExpansion: -[1.7.10]4.0.0-176
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Player Count: 1 / 8; [EntityPlayerMP['Player931'/7, l='New World', x=-236.99, y=56.00, z=822.46]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
