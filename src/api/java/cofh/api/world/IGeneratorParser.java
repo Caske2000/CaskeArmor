@@ -1,7 +1,6 @@
 package cofh.api.world;
 
-//TODO Remove '//'
-//import cofh.lib.util.WeightedRandomBlock;
+import cofh.lib.util.WeightedRandomBlock;
 import com.google.gson.JsonObject;
 
 import java.util.List;
@@ -29,8 +28,7 @@ public interface IGeneratorParser {
 	 *            The processed list of materials to generate in
 	 * @return The {@link WorldGenerator} to be registered with an IFeatureGenerator
 	 */
-	//TODO Remove '//'
-	//public WorldGenerator parseGenerator(String generatorName, JsonObject genObject, Logger log, List<WeightedRandomBlock> resList, int clusterSize,
-	//		List<WeightedRandomBlock> matList);
+	public WorldGenerator parseGenerator(String generatorName, JsonObject genObject, Logger log, List<WeightedRandomBlock> resList, int clusterSize,
+		List<WeightedRandomBlock> matList);
 
 }

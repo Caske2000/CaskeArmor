@@ -6,7 +6,8 @@ import net.minecraft.nbt.NBTTagCompound;
 /*
     Code By Pahimar (https://goo.gl/9xDh8X)
  */
-public abstract class NBTHelper {
+public abstract class NBTHelper
+{
 
     /**
      * Initializes the NBT Tag Compound for the given ItemStack if it is null

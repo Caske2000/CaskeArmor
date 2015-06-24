@@ -2,16 +2,15 @@ package com.caske2000.caskearmor.item;
 
 import cofh.api.energy.IEnergyContainerItem;
 import cofh.core.item.ItemArmorAdv;
-import cofh.lib.util.helpers.EnergyHelper;
 import cofh.lib.util.helpers.MathHelper;
 import cofh.lib.util.helpers.StringHelper;
 import com.caske2000.caskearmor.creativetab.CreativeTab;
+import com.caske2000.caskearmor.handler.ConfigurationHandler;
 import com.caske2000.caskearmor.util.CStringHelper;
 import com.caske2000.caskearmor.util.LogHelper;
 import com.caske2000.caskearmor.util.NBTHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -20,23 +19,20 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
-import net.minecraft.world.World;
 import net.minecraftforge.common.ISpecialArmor;
 
 import java.util.List;
 
-public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, ISpecialArmor, IHUDInfoItem {
+public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, ISpecialArmor, IHUDInfoItem
+{
 
     private int maxEnergy;
     private int maxTransfer;
     private int energyPerDamage = 150;
     private ArmorMetal armorMetal;
 
-    public enum ArmorMetal {
-        LEADSTONE, HARDENED, REDSTONE, RESONANT
-    }
-
-    public ItemRFArmor(ArmorMaterial material, int type, int maxEnergy, int maxTransfer, ArmorMetal metal) {
+    public ItemRFArmor(ArmorMaterial material, int type, int maxEnergy, int maxTransfer, ArmorMetal metal)
+    {
         super(material, type);
         this.maxEnergy = maxEnergy;
         this.maxTransfer = maxTransfer;
@@ -45,35 +41,41 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
     }
 
     @Override
-    public boolean getIsRepairable(ItemStack itemToRepair, ItemStack stack) {
+    public boolean getIsRepairable(ItemStack itemToRepair, ItemStack stack)
+    {
         return false;
     }
 
     @Override
-    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean check) {
+    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean check)
+    {
 
         if (stack.getTagCompound().getInteger("MAX_ENERGY") == 0)
             NBTHelper.setInteger(stack, "MAX_ENERGY", maxEnergy);
 
         if (stack.getTagCompound() == null)
             NBTHelper.setInteger(stack, "ENERGY", 0);
-        if (StringHelper.isShiftKeyDown()) {
+        if (StringHelper.isShiftKeyDown())
+        {
             list.add(CStringHelper.localize("info.caske.energy") + ": " + stack.stackTagCompound.getInteger("ENERGY") + " / " + maxEnergy + " RF");
             list.add(CStringHelper.localize("info.caske.io") + ": " + maxTransfer + " RF/t");
-        } else {
+        } else
+        {
             list.add(CStringHelper.shiftForInfo());
         }
     }
 
     // Copied from the RedstoneArsenal repository
     @Override
-    public int receiveEnergy(ItemStack armor, int maxReceive, boolean simulate) {
+    public int receiveEnergy(ItemStack armor, int maxReceive, boolean simulate)
+    {
         if (armor.stackTagCompound == null)
             NBTHelper.setInteger(armor, "ENERGY", 0);
         int stored = armor.stackTagCompound.getInteger("ENERGY");
         int receive = Math.min(maxReceive, Math.min(maxEnergy - stored, maxTransfer));
 
-        if (!simulate) {
+        if (!simulate)
+        {
             stored += receive;
             armor.stackTagCompound.setInteger("ENERGY", stored);
         }
@@ -82,13 +84,15 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
 
     // Copied from the RedstoneArsenal repository
     @Override
-    public int extractEnergy(ItemStack armor, int maxExtract, boolean simulate) {
+    public int extractEnergy(ItemStack armor, int maxExtract, boolean simulate)
+    {
         if (armor.stackTagCompound == null)
             NBTHelper.setInteger(armor, "ENERGY", 0);
         int stored = armor.stackTagCompound.getInteger("ENERGY");
         int extract = Math.min(maxExtract, stored);
 
-        if (!simulate) {
+        if (!simulate)
+        {
             stored -= extract;
             armor.stackTagCompound.setInteger("ENERGY", stored);
         }
@@ -96,21 +100,25 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
     }
 
     @Override
-    public int getEnergyStored(ItemStack armor) {
+    public int getEnergyStored(ItemStack armor)
+    {
         if (armor.stackTagCompound == null)
             NBTHelper.setInteger(armor, "ENERGY", 0);
         return armor.stackTagCompound.getInteger("ENERGY");
     }
 
     @Override
-    public int getMaxEnergyStored(ItemStack armor) {
+    public int getMaxEnergyStored(ItemStack armor)
+    {
         return maxEnergy;
     }
 
     // Copied from the RedstoneArsenal repository
     @Override
-    public ArmorProperties getProperties(EntityLivingBase player, ItemStack armor, DamageSource source, double damage, int slot) {
-        if (source.isUnblockable()) {
+    public ArmorProperties getProperties(EntityLivingBase player, ItemStack armor, DamageSource source, double damage, int slot)
+    {
+        if (source.isUnblockable())
+        {
             int absorbMax = getEnergyPerDamage(armor) > 0 ? 25 * getEnergyStored(armor) / getEnergyPerDamage(armor) : 0;
             return new ArmorProperties(0, getAbsorbRatio(armorMetal) * getArmorMaterial().getDamageReductionAmount(armorType) * 0.025, absorbMax);
         }
@@ -120,14 +128,16 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
     }
 
     // Copied from the RedstoneArsenal repository
-    protected int getEnergyPerDamage(ItemStack stack) {
+    protected int getEnergyPerDamage(ItemStack stack)
+    {
         int unbLvl = MathHelper.clampI(EnchantmentHelper.getEnchantmentLevel(Enchantment.unbreaking.effectId, stack), 0, 4);
         return energyPerDamage * (5 - unbLvl) / 5;
     }
 
     // Copied from the RedstoneArsenal repository
     @Override
-    public int getArmorDisplay(EntityPlayer player, ItemStack armor, int slot) {
+    public int getArmorDisplay(EntityPlayer player, ItemStack armor, int slot)
+    {
         if (getEnergyStored(armor) >= getEnergyPerDamage(armor))
             return getAbsorptionRatio() / 5;
         return 0;
@@ -135,9 +145,11 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
 
     //Copied from the RedstoneArsenal repository
     // Returns a % that each piece absorbs, set sums to 100.
-    protected int getAbsorptionRatio() {
+    protected int getAbsorptionRatio()
+    {
 
-        switch (armorType) {
+        switch (armorType)
+        {
             case 0:
                 return 15;
             case 1:
@@ -151,45 +163,59 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
     }
 
     @Override
-    public void damageArmor(EntityLivingBase entity, ItemStack stack, DamageSource source, int damage, int slot) {
-            extractEnergy(stack, damage * getEnergyPerDamage(stack), false);
+    public void damageArmor(EntityLivingBase entity, ItemStack stack, DamageSource source, int damage, int slot)
+    {
+        extractEnergy(stack, damage * getEnergyPerDamage(stack), false);
     }
 
     @Override
-    public int getMaxDamage(ItemStack stack) {
+    public int getMaxDamage(ItemStack stack)
+    {
         return maxEnergy;
     }
 
     @Override
-    public int getDisplayDamage(ItemStack armor) {
+    public int getDisplayDamage(ItemStack armor)
+    {
         if (armor.stackTagCompound == null)
             NBTHelper.setInteger(armor, "ENERGY", 0);
         return maxEnergy - armor.stackTagCompound.getInteger("ENERGY");
     }
 
     @Override
-    public boolean showDurabilityBar(ItemStack stack) {
+    public boolean showDurabilityBar(ItemStack stack)
+    {
         return true;
     }
-    // TODO maybe add isDamaged
 
     // Copied from the RedstoneArsenal repository, to add an item without energy and one with
     @Override
-    public void getSubItems(Item item, CreativeTabs tab, List list) {
+    public void getSubItems(Item item, CreativeTabs tab, List list)
+    {
 
         list.add(CStringHelper.setDefaultEnergyTag(new ItemStack(item, 1, 0), 0));
         list.add(CStringHelper.setDefaultEnergyTag(new ItemStack(item, 1, 0), maxEnergy));
     }
+    // TODO maybe add isDamaged
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void addInfoToHUD(List<String> list, ItemStack stack) {
-        list.add(CStringHelper.getHUDEnergy(stack.stackTagCompound.getInteger("ENERGY"), maxEnergy));
+    public void addInfoToHUD(List<String> list, ItemStack stack)
+    {
+        if (ConfigurationHandler.extendedHUD)
+        {
+            list.add(CStringHelper.getHUDEnergy(stack.stackTagCompound.getInteger("ENERGY"), maxEnergy));
+        } else if ((double) getEnergyStored(stack)/(double) maxEnergy < 0.1)
+        {
+            list.add(CStringHelper.getEnergyLow(armorType));
+        }
     }
 
-    private double getAbsorbRatio(ArmorMetal type) {
+    private double getAbsorbRatio(ArmorMetal type)
+    {
         double absorbRatio = 0.7D;
-        switch (type) {
+        switch (type)
+        {
             case LEADSTONE:
                 absorbRatio = 0.5D;
                 break;
@@ -204,5 +230,10 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
                 break;
         }
         return absorbRatio;
+    }
+
+    public enum ArmorMetal
+    {
+        LEADSTONE, HARDENED, REDSTONE, RESONANT
     }
 }

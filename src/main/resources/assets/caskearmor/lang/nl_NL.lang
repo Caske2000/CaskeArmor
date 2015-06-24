@@ -1,0 +1,27 @@
+# Items
+item.leadstoneHelmet.name=§9Loodsteen Helm§r
+item.leadstoneChestplate.name=§9Loodsteen Borstplaat§r
+item.leadstoneLegs.name=§9Loodsteen Beenbeschermers§r
+item.leadstoneBoots.name=§9Loodsteen Laarzen§r
+
+item.hardenedHelmet.name=§7Verharde Helm§r
+item.hardenedChestplate.name=§7Verharde Borstplaat§r
+item.hardenedLegs.name=§7Verharde Beenbeschermers§r
+item.hardenedBoots.name=§7Verharde Laarzen§r
+
+item.redstoneHelmet.name=§6Redstone Helm§r
+item.redstoneChestplate.name=§6Redstone Borstplaat§r
+item.redstoneLegs.name=§6Redstone Beenbeschermers§r
+item.redstoneBoots.name=§6Redstone Laarzen§r
+
+# Creative Tab
+itemGroup.caskearmor=Caske Wapenuitrusing
+
+# Word & Sentence Stuffs
+info.caske.hold=Houd
+info.caske.io=IO
+info.caske.low=heeft weinig energie
+info.caske.moreInfo=ingedrukt voor meer info
+info.caske.energy=Opgeslagen Energie
+info.caske.shift=Shift
+info.caske.your=Je

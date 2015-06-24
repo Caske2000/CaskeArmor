@@ -2,16 +2,19 @@ package com.caske2000.caskearmor.lib;
 
 import cofh.CoFHCore;
 
-public class Reference {
+public class Reference
+{
     public static final String MODID = "caskearmor";
     public static final String NAME = "Caske Armor";
-    public static final String ID = "1.7.10-1.0";
+    public static final String ID = "1.7.10-0.1.1";
     public static final String DEPENDENCIES = "required-after:CoFHCore@[" + CoFHCore.version + ",);after:ThermalExpansion";
 
     public static final String COMMON_PROXY = "com.caske2000.caskearmor.proxy.CommonProxy";
     public static final String CLIENT_PROXY = "com.caske2000.caskearmor.proxy.ClientProxy";
+    public static final String GUI_FACTORY = "com.caske2000.caskearmor.client.gui.GuiFactory";
 
-    public static final class Names {
+    public static final class Names
+    {
         public static final String LEADSTONE_CHEST = "leadstoneChestplate";
         public static final String LEADSTONE_HELMET = "leadstoneHelmet";
         public static final String LEADSTONE_LEGS = "leadstoneLegs";
@@ -28,7 +31,8 @@ public class Reference {
         public static final String REDSTONE_BOOTS = "redstoneBoots";
     }
 
-    public static final class Numbers {
+    public static final class Numbers
+    {
         public static final int LEADSTONE_MAX_ENERGY = 80000;
         public static final int LEADSTONE_MAX_TRANSFER = 200;
 

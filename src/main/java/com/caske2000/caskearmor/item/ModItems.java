@@ -6,38 +6,36 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraftforge.common.util.EnumHelper;
 
-public class ModItems {
+public class ModItems
+{
 
+    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_LEADSTONE = EnumHelper.addArmorMaterial("LEADSTONE", 100, new int[]{2, 4, 3, 2}, 10);
+    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_HARDENED = EnumHelper.addArmorMaterial("HARDENED", 100, new int[]{2, 6, 4, 2}, 20);
+    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_REDSTONE = EnumHelper.addArmorMaterial("REDSTONE", 100, new int[]{3, 6, 5, 2}, 30);
+    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_RESONANT = EnumHelper.addArmorMaterial("RESONANT", 100, new int[]{3, 8, 6, 3}, 40);
     // Leadstone Armor
     public static Item leadstoneHelmet;
     public static Item leadstoneChest;
     public static Item leadstoneLegs;
     public static Item leadstoneBoots;
-
     // Hardened Armor
     public static Item hardenedHelmet;
     public static Item hardenedChest;
     public static Item hardenedLegs;
     public static Item hardenedBoots;
-
     // Redstone Armor
     public static Item redstoneHelmet;
     public static Item redstoneChest;
     public static Item redstoneLegs;
     public static Item redstoneBoots;
-
     // Resonant Armor
     public static Item resonantHelmet;
     public static Item resonantChest;
     public static Item resonantLegs;
     public static Item resonantBoots;
 
-    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_LEADSTONE = EnumHelper.addArmorMaterial("LEADSTONE", 100, new int[]{2, 4, 3, 2}, 10);
-    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_HARDENED = EnumHelper.addArmorMaterial("HARDENED", 100, new int[] { 2, 6, 4, 2}, 20);
-    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_REDSTONE = EnumHelper.addArmorMaterial("REDSTONE", 100, new int[]{3, 6, 5, 2}, 30);
-    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_RESONANT = EnumHelper.addArmorMaterial("RESONANT", 100, new int[]{3, 8, 6, 3}, 40);
-
-    public static void preInit() {
+    public static void preInit()
+    {
 
         // TODO: Create a better way to register the items & stuffs!
 
@@ -75,8 +73,10 @@ public class ModItems {
         registerItem(redstoneBoots, Reference.Names.REDSTONE_BOOTS);
     }
 
-    private static void registerItem(Item item, String name) {
-        if (item != null) {
+    private static void registerItem(Item item, String name)
+    {
+        if (item != null)
+        {
             GameRegistry.registerItem(item, name);
         }
     }

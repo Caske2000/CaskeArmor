@@ -20,6 +20,8 @@ itemGroup.caskearmor=Caske Armor
 # Word & Sentence Stuffs
 info.caske.hold=Hold
 info.caske.io=IO
-info.caske.moreInfo=for more Info
+info.caske.low=is low on power
+info.caske.moreInfo=for more info
 info.caske.energy=Energy Stored
 info.caske.shift=Shift
+info.caske.your=Your

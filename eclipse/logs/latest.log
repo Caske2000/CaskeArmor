@@ -1,118 +1,81 @@
-[19:40:40] [main/INFO]: Setting user: Player137
-[19:40:42] [Client thread/INFO]: LWJGL Version: 2.9.1
-[19:40:47] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Caske Armor, FMLFileResourcePack:CoFH Core, FMLFileResourcePack:Thermal Dynamics, FMLFileResourcePack:Thermal Expansion, FMLFileResourcePack:Thermal Foundation
-[19:40:49] [Sound Library Loader/INFO]: Sound engine started
-[19:40:50] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/ambient.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzAmbient
-[19:40:50] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/attack.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzAttack
-[19:40:50] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/breathe0.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzBreathe0
-[19:40:50] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/breathe1.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzBreathe1
-[19:40:50] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/breathe2.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzBreathe2
-[19:40:50] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/ambient.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzAmbient
-[19:40:50] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/attack.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzAttack
-[19:40:50] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/breathe0.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzBreathe0
-[19:40:50] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/breathe1.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzBreathe1
-[19:40:50] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/breathe2.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzBreathe2
-[19:40:51] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
-[19:40:51] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[19:40:52] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Caske Armor, FMLFileResourcePack:CoFH Core, FMLFileResourcePack:Thermal Dynamics, FMLFileResourcePack:Thermal Expansion, FMLFileResourcePack:Thermal Foundation
-[19:40:53] [Client thread/INFO]: Created: 512x512 textures/blocks-atlas
-[19:40:53] [Client thread/INFO]: Created: 1024x512 textures/items-atlas
-[19:40:54] [Sound Library Loader/INFO]: Sound engine started
-[19:40:55] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/ambient.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzAmbient
-[19:40:55] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/attack.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzAttack
-[19:40:55] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/breathe0.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzBreathe0
-[19:40:55] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/breathe1.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzBreathe1
-[19:40:55] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/breathe2.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzBreathe2
-[19:40:55] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/ambient.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzAmbient
-[19:40:55] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/attack.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzAttack
-[19:40:55] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/breathe0.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzBreathe0
-[19:40:55] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/breathe1.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzBreathe1
-[19:40:55] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/breathe2.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzBreathe2
-[19:40:55] [Client thread/ERROR]: ########## GL ERROR ##########
-[19:40:55] [Client thread/ERROR]: @ Post startup
-[19:40:55] [Client thread/ERROR]: 1286: Invalid framebuffer operation
-[19:41:26] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[19:41:26] [Server thread/INFO]: Generating keypair
-[19:41:26] [Server thread/INFO]: Converting map!
-[19:41:26] [Server thread/INFO]: Scanning folders...
-[19:41:26] [Server thread/INFO]: Total conversion count is 0
-[19:41:26] [Server thread/WARN]: Unable to find spawn biome
-[19:41:27] [Server thread/INFO]: Preparing start region for level 0
-[19:41:27] [Server thread/INFO]: Changing view distance to 12, from 10
-[19:41:28] [Server thread/INFO]: Player137[local:E:52ce9df0] logged in with entity id 2 at (462.5, 56.0, -612.5)
-[19:41:28] [Server thread/INFO]: Player137 joined the game
-[19:41:33] [Server thread/INFO]: Player137 has just earned the achievement [Taking Inventory]
-[19:41:33] [Client thread/INFO]: [CHAT] Player137 has just earned the achievement [Taking Inventory]
-[19:41:34] [Server thread/INFO]: Saving and pausing game...
-[19:41:34] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[19:41:34] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[19:41:34] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[19:41:45] [Server thread/INFO]: Changing view distance to 10, from 12
-[19:41:48] [Client thread/INFO]: [CHAT] You are now playing creative+
-[19:41:50] [Client thread/INFO]: [CHAT] You are now playing adventure
-[19:41:51] [Client thread/INFO]: [CHAT] You are now playing survival
-[19:41:51] [Client thread/INFO]: [CHAT] You are now playing creative
-[19:41:56] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:41:56] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:41:58] [Server thread/INFO]: [Player137: Game rule has been updated]
-[19:41:58] [Client thread/INFO]: [CHAT] Game rule has been updated
-[19:42:04] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing and naturalRegeneration
-[19:42:04] [Client thread/INFO]: [CHAT] [Thermal Expansion] A new version is available§6:
-[19:42:04] [Client thread/INFO]: [CHAT] §f[Download§f] Adds some stupid-mod protection and new lights!
-[19:42:05] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:42:05] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:42:06] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:42:07] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:42:07] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:42:09] [Server thread/INFO]: [Player137: Game rule has been updated]
-[19:42:09] [Client thread/INFO]: [CHAT] Game rule has been updated
-[19:42:11] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:42:11] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:42:12] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:42:12] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:42:12] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:42:13] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:42:13] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:42:14] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:42:18] [Server thread/INFO]: [Player137: Game rule has been updated]
-[19:42:18] [Client thread/INFO]: [CHAT] Game rule has been updated
-[19:42:22] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:42:22] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:42:23] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:42:23] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:42:23] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:42:23] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:42:25] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:42:25] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:42:25] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:42:26] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:42:26] [Client thread/INFO]: [CHAT] commandBlockOutput, doDaylightCycle, doFireTick, doMobLoot, doMobSpawning, doTileDrops, keepInventory, mobGriefing, naturalRegeneration
-[19:42:32] [Client thread/INFO]: [CHAT] doDaylightCycle = false
-[19:42:33] [Client thread/INFO]: [CHAT] doDaylightCycle = false
-[19:42:34] [Client thread/INFO]: [CHAT] doDaylightCycle = false
-[19:42:35] [Client thread/INFO]: [CHAT] doDaylightCycle = false
-[19:42:35] [Client thread/INFO]: [CHAT] doDaylightCycle = false
-[19:42:36] [Client thread/INFO]: [CHAT] doDaylightCycle = false
-[19:42:54] [Server thread/INFO]: Saving and pausing game...
-[19:42:54] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[19:42:54] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[19:42:54] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[19:42:57] [Server thread/INFO]: Saving and pausing game...
-[19:42:57] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[19:42:57] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[19:42:57] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[19:43:19] [Server thread/INFO]: Saving and pausing game...
-[19:43:19] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[19:43:19] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[19:43:19] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[19:43:32] [Server thread/INFO]: Saving and pausing game...
-[19:43:32] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[19:43:32] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[19:43:32] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[19:43:33] [Server thread/INFO]: Stopping server
-[19:43:33] [Server thread/INFO]: Saving players
-[19:43:33] [Server thread/INFO]: Saving worlds
-[19:43:33] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[19:43:33] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[19:43:33] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[19:43:33] [Client thread/INFO]: Stopping!
+[11:17:48] [main/INFO]: Setting user: Player35
+[11:17:50] [Client thread/INFO]: LWJGL Version: 2.9.1
+[11:17:57] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Caske Armor, FMLFileResourcePack:CoFH Core, FMLFileResourcePack:Thermal Dynamics, FMLFileResourcePack:Thermal Expansion, FMLFileResourcePack:Thermal Foundation
+[11:17:59] [Sound Library Loader/INFO]: Sound engine started
+[11:18:00] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/ambient.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzAmbient
+[11:18:00] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/attack.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzAttack
+[11:18:00] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/breathe0.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzBreathe0
+[11:18:00] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/breathe1.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzBreathe1
+[11:18:00] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/breathe2.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzBreathe2
+[11:18:00] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/ambient.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzAmbient
+[11:18:00] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/attack.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzAttack
+[11:18:00] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/breathe0.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzBreathe0
+[11:18:00] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/breathe1.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzBreathe1
+[11:18:00] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/breathe2.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzBreathe2
+[11:18:00] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[11:18:00] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[11:18:02] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Caske Armor, FMLFileResourcePack:CoFH Core, FMLFileResourcePack:Thermal Dynamics, FMLFileResourcePack:Thermal Expansion, FMLFileResourcePack:Thermal Foundation
+[11:18:03] [Client thread/INFO]: Created: 512x512 textures/blocks-atlas
+[11:18:03] [Client thread/INFO]: Created: 1024x512 textures/items-atlas
+[11:18:04] [Sound Library Loader/INFO]: Sound engine started
+[11:18:05] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/ambient.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzAmbient
+[11:18:05] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/attack.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzAttack
+[11:18:05] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/breathe0.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzBreathe0
+[11:18:05] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/breathe1.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzBreathe1
+[11:18:05] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/breathe2.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzBreathe2
+[11:18:05] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/ambient.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzAmbient
+[11:18:05] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/attack.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzAttack
+[11:18:05] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/breathe0.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzBreathe0
+[11:18:05] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/breathe1.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzBreathe1
+[11:18:05] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/breathe2.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzBreathe2
+[11:18:05] [Client thread/ERROR]: ########## GL ERROR ##########
+[11:18:05] [Client thread/ERROR]: @ Post startup
+[11:18:05] [Client thread/ERROR]: 1286: Invalid framebuffer operation
+[11:18:08] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[11:18:08] [Server thread/INFO]: Generating keypair
+[11:18:08] [Server thread/INFO]: Preparing start region for level 0
+[11:18:09] [Server thread/INFO]: Player35[local:E:653a3104] logged in with entity id 2 at (475.0184759550698, 56.0, -627.5321525553438)
+[11:18:09] [Server thread/INFO]: Player35 is het spel binnengekomen
+[11:18:15] [Server thread/INFO]: Player35 heeft net de prestatie [Inventariseren] behaald
+[11:18:15] [Client thread/INFO]: [CHAT] Player35 heeft net de prestatie [Inventariseren] behaald
+[11:18:27] [Server thread/INFO]: Saving and pausing game...
+[11:18:27] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[11:18:27] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[11:18:27] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[11:18:33] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Caske Armor, FMLFileResourcePack:CoFH Core, FMLFileResourcePack:Thermal Dynamics, FMLFileResourcePack:Thermal Expansion, FMLFileResourcePack:Thermal Foundation
+[11:18:33] [Client thread/INFO]: Created: 512x512 textures/blocks-atlas
+[11:18:34] [Client thread/INFO]: Created: 1024x512 textures/items-atlas
+[11:18:35] [Sound Library Loader/INFO]: Sound engine started
+[11:18:36] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/ambient.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzAmbient
+[11:18:36] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/attack.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzAttack
+[11:18:36] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/breathe0.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzBreathe0
+[11:18:36] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/breathe1.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzBreathe1
+[11:18:36] [Client thread/WARN]: File thermalfoundation:sounds/mob/blitz/breathe2.ogg does not exist, cannot add it to event thermalfoundation:mobBlitzBreathe2
+[11:18:36] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/ambient.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzAmbient
+[11:18:36] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/attack.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzAttack
+[11:18:36] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/breathe0.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzBreathe0
+[11:18:36] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/breathe1.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzBreathe1
+[11:18:36] [Client thread/WARN]: File thermalfoundation:sounds/mob/basalz/breathe2.ogg does not exist, cannot add it to event thermalfoundation:mobBasalzBreathe2
+[11:18:51] [Client thread/INFO]: [CHAT] [Thermal Expansion] A new version is available§6:
+[11:18:51] [Client thread/INFO]: [CHAT] §f[Download§f] Adds some stupid-mod protection and new lights!
+[11:18:58] [Server thread/INFO]: Player35 was slain by Zombie Pigman
+[11:18:58] [Client thread/INFO]: [CHAT] Player35 was slain by Zombie Pigman
+[11:19:00] [Server thread/INFO]: Saving and pausing game...
+[11:19:00] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[11:19:00] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[11:19:00] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[11:19:15] [Server thread/INFO]: Player35 was slain by Zombie Pigman
+[11:19:15] [Client thread/INFO]: [CHAT] Player35 was slain by Zombie Pigman
+[11:19:37] [Server thread/INFO]: [Player35: Given [item.redstoneChestplate.name] * 1 to Player35]
+[11:19:37] [Client thread/INFO]: [CHAT] Given [item.redstoneChestplate.name] * 1 to Player35
+[11:19:43] [Server thread/INFO]: Saving and pausing game...
+[11:19:43] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[11:19:43] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[11:19:43] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[11:19:46] [Server thread/INFO]: Stopping server
+[11:19:46] [Server thread/INFO]: Saving players
+[11:19:46] [Server thread/INFO]: Saving worlds
+[11:19:46] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[11:19:46] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[11:19:46] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[11:19:47] [Client thread/INFO]: Stopping!
