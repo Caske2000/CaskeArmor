@@ -1,8 +1,9 @@
 package com.caske2000.caskearmor.lib;
 
 import cofh.CoFHCore;
+import com.caske2000.caskearmor.util.CStringHelper;
 
-public class Reference
+public final class Reference
 {
     public static final String MODID = "caskearmor";
     public static final String NAME = "Caske Armor";
@@ -44,5 +45,11 @@ public class Reference
 
         public static final int RESONANT_MAX_ENERGY = 20000000;
         public static final int RESONANT_MAX_TRANSFER = 32000;
+    }
+
+    public static final class Keys
+    {
+        public static final String CATEGORY = "keys.caskearmor.category";
+        public static final String OPTIONS_MENU = "keys.caskearmor.optionsMenu";
     }
 }

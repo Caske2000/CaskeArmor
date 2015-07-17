@@ -22,4 +22,9 @@ public class CommonProxy
     {
 
     }
+
+    public void registerKeyBindings()
+    {
+    } // NOOP
+
 }

@@ -1,6 +1,7 @@
 package com.caske2000.caskearmor;
 
 import com.caske2000.caskearmor.handler.ConfigurationHandler;
+import com.caske2000.caskearmor.handler.KeyInputEventHandler;
 import com.caske2000.caskearmor.lib.Reference;
 import com.caske2000.caskearmor.proxy.CommonProxy;
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -25,12 +26,14 @@ public class CaskeArmor
     {
         ConfigurationHandler.init(e.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+        proxy.registerKeyBindings();
         proxy.preInit(e);
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent e)
     {
+        FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
         proxy.init(e);
     }
 

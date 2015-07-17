@@ -1,6 +1,7 @@
 package com.caske2000.caskearmor.util;
 
-import cofh.lib.util.helpers.StringHelper;
+import com.caske2000.caskearmor.handler.ConfigurationHandler;
+import com.caske2000.caskearmor.lib.Reference;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.StatCollector;
@@ -13,10 +14,26 @@ public final class CStringHelper
         return "§b§o" + localize("info.caske.hold") + " §r§e" + localize("info.caske.shift") + " §r" + "§b§o" + localize("info.caske.moreInfo");
     }
 
-    public static String getHUDEnergy(int energy, int maxEnergy)
+    public static String getHUDEnergy(int energy, int maxEnergy, int armorType)
     {
-        String HUDtext = StringHelper.localize("info.caske.energy") + ": " + energy + " / " + maxEnergy + " RF";
-        return HUDtext;
+        String HUDText = "";
+        switch (armorType)
+        {
+            case 0:
+                HUDText += "Helmet";
+                break;
+            case 1:
+                HUDText += "Chestplate";
+                break;
+            case 2:
+                HUDText += "Leggings";
+                break;
+            case 3:
+                HUDText += "Boots";
+                break;
+        }
+        HUDText += " : " + energy + " / " + maxEnergy + " RF";
+        return HUDText;
     }
 
     public static String getEnergyLow(int armorType)

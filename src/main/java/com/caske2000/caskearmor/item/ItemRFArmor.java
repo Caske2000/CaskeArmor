@@ -6,8 +6,8 @@ import cofh.lib.util.helpers.MathHelper;
 import cofh.lib.util.helpers.StringHelper;
 import com.caske2000.caskearmor.creativetab.CreativeTab;
 import com.caske2000.caskearmor.handler.ConfigurationHandler;
+import com.caske2000.caskearmor.lib.Reference;
 import com.caske2000.caskearmor.util.CStringHelper;
-import com.caske2000.caskearmor.util.LogHelper;
 import com.caske2000.caskearmor.util.NBTHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -25,7 +25,7 @@ import java.util.List;
 
 public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, ISpecialArmor, IHUDInfoItem
 {
-
+    // TODO Own the code!
     private int maxEnergy;
     private int maxTransfer;
     private int energyPerDamage = 150;
@@ -192,7 +192,6 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
     @Override
     public void getSubItems(Item item, CreativeTabs tab, List list)
     {
-
         list.add(CStringHelper.setDefaultEnergyTag(new ItemStack(item, 1, 0), 0));
         list.add(CStringHelper.setDefaultEnergyTag(new ItemStack(item, 1, 0), maxEnergy));
     }
@@ -203,12 +202,9 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
     public void addInfoToHUD(List<String> list, ItemStack stack)
     {
         if (ConfigurationHandler.extendedHUD)
-        {
-            list.add(CStringHelper.getHUDEnergy(stack.stackTagCompound.getInteger("ENERGY"), maxEnergy));
-        } else if ((double) getEnergyStored(stack)/(double) maxEnergy < 0.1)
-        {
+            list.add(CStringHelper.getHUDEnergy(stack.stackTagCompound.getInteger("ENERGY"), maxEnergy, armorType));
+        else if ((double) getEnergyStored(stack) / (double) maxEnergy < 0.1)
             list.add(CStringHelper.getEnergyLow(armorType));
-        }
     }
 
     private double getAbsorbRatio(ArmorMetal type)

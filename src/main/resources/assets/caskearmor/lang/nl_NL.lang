@@ -20,8 +20,12 @@ itemGroup.caskearmor=Caske Wapenuitrusing
 # Word & Sentence Stuffs
 info.caske.hold=Houd
 info.caske.io=IO
-info.caske.low=heeft weinig energie
+info.caske.low=heeft weinig energie!
 info.caske.moreInfo=ingedrukt voor meer info
 info.caske.energy=Opgeslagen Energie
 info.caske.shift=Shift
 info.caske.your=Je
+
+# Keys
+keys.caskearmor.category=Caske Wapenuitrusing
+keys.caskearmor.optionsMenu=Menu voor opties
