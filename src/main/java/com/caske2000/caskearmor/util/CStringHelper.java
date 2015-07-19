@@ -1,7 +1,5 @@
 package com.caske2000.caskearmor.util;
 
-import com.caske2000.caskearmor.handler.ConfigurationHandler;
-import com.caske2000.caskearmor.lib.Reference;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.StatCollector;

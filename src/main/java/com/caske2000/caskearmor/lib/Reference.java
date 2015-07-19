@@ -1,7 +1,6 @@
 package com.caske2000.caskearmor.lib;
 
 import cofh.CoFHCore;
-import com.caske2000.caskearmor.util.CStringHelper;
 
 public final class Reference
 {

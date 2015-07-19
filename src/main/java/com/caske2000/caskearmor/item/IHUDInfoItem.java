@@ -9,5 +9,5 @@ import java.util.List;
 public interface IHUDInfoItem
 {
     @SideOnly(Side.CLIENT)
-    void addInfoToHUD(List<String> list, ItemStack stack);
+    String getHUDString(ItemStack stack);
 }

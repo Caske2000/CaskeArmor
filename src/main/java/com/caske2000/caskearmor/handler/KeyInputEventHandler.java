@@ -23,7 +23,5 @@ public class KeyInputEventHandler
     {
         if (getPressedKey() == Key.OPTIONS_MENU && Minecraft.getMinecraft().theWorld.isRemote)
             Minecraft.getMinecraft().displayGuiScreen(new ModGuiConfig(Minecraft.getMinecraft().currentScreen));
-        else if (getPressedKey() == Key.UNKNOWN)
-            return;
     }
 }

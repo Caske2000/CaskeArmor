@@ -6,8 +6,8 @@ import cofh.lib.util.helpers.MathHelper;
 import cofh.lib.util.helpers.StringHelper;
 import com.caske2000.caskearmor.creativetab.CreativeTab;
 import com.caske2000.caskearmor.handler.ConfigurationHandler;
-import com.caske2000.caskearmor.lib.Reference;
 import com.caske2000.caskearmor.util.CStringHelper;
+import com.caske2000.caskearmor.util.LogHelper;
 import com.caske2000.caskearmor.util.NBTHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -28,7 +28,6 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
     // TODO Own the code!
     private int maxEnergy;
     private int maxTransfer;
-    private int energyPerDamage = 150;
     private ArmorMetal armorMetal;
 
     public ItemRFArmor(ArmorMaterial material, int type, int maxEnergy, int maxTransfer, ArmorMetal metal)
@@ -131,6 +130,7 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
     protected int getEnergyPerDamage(ItemStack stack)
     {
         int unbLvl = MathHelper.clampI(EnchantmentHelper.getEnchantmentLevel(Enchantment.unbreaking.effectId, stack), 0, 4);
+        int energyPerDamage = 150;
         return energyPerDamage * (5 - unbLvl) / 5;
     }
 
@@ -196,15 +196,16 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
         list.add(CStringHelper.setDefaultEnergyTag(new ItemStack(item, 1, 0), maxEnergy));
     }
     // TODO maybe add isDamaged
-
     @Override
     @SideOnly(Side.CLIENT)
-    public void addInfoToHUD(List<String> list, ItemStack stack)
+    public String getHUDString(ItemStack stack)
     {
+        String str = "";
         if (ConfigurationHandler.extendedHUD)
-            list.add(CStringHelper.getHUDEnergy(stack.stackTagCompound.getInteger("ENERGY"), maxEnergy, armorType));
+            str = CStringHelper.getHUDEnergy(stack.stackTagCompound.getInteger("ENERGY"), maxEnergy, armorType);
         else if ((double) getEnergyStored(stack) / (double) maxEnergy < 0.1)
-            list.add(CStringHelper.getEnergyLow(armorType));
+            str = CStringHelper.getEnergyLow(armorType);
+        return str;
     }
 
     private double getAbsorbRatio(ArmorMetal type)

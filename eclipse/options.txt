@@ -1,7 +1,7 @@
 invertYMouse:false
 mouseSensitivity:0.5
 fov:1.0
-gamma:0.5070422
+gamma:0.49295774
 saturation:0.0
 renderDistance:10
 guiScale:2
@@ -17,7 +17,7 @@ ao:2
 clouds:true
 resourcePacks:[]
 lastServer:
-lang:en_GB
+lang:en_US
 chatVisibility:0
 chatColors:true
 chatLinks:true
