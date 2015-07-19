@@ -39,7 +39,7 @@ public class ModItems
 
         // TODO: Create a better way to register the items & stuffs!
 
-        // Leadstone
+        //region Leadstone
         leadstoneHelmet = new ItemRFArmor(ARMOR_MATERIAL_LEADSTONE, 0, Reference.Numbers.LEADSTONE_MAX_ENERGY, Reference.Numbers.LEADSTONE_MAX_TRANSFER, ItemRFArmor.ArmorMetal.LEADSTONE).setUnlocalizedName(Reference.Names.LEADSTONE_HELMET).setTextureName(Reference.MODID + ":" + Reference.Names.LEADSTONE_HELMET);
         leadstoneChest = new ItemRFArmor(ARMOR_MATERIAL_LEADSTONE, 1, Reference.Numbers.LEADSTONE_MAX_ENERGY, Reference.Numbers.LEADSTONE_MAX_TRANSFER, ItemRFArmor.ArmorMetal.LEADSTONE).setUnlocalizedName(Reference.Names.LEADSTONE_CHEST).setTextureName(Reference.MODID + ":" + Reference.Names.LEADSTONE_CHEST);
         leadstoneLegs = new ItemRFArmor(ARMOR_MATERIAL_LEADSTONE, 2, Reference.Numbers.LEADSTONE_MAX_ENERGY, Reference.Numbers.LEADSTONE_MAX_TRANSFER, ItemRFArmor.ArmorMetal.LEADSTONE).setUnlocalizedName(Reference.Names.LEADSTONE_LEGS).setTextureName(Reference.MODID + ":" + Reference.Names.LEADSTONE_LEGS);
@@ -49,8 +49,9 @@ public class ModItems
         registerItem(leadstoneChest, Reference.Names.LEADSTONE_CHEST);
         registerItem(leadstoneLegs, Reference.Names.LEADSTONE_LEGS);
         registerItem(leadstoneBoots, Reference.Names.LEADSTONE_BOOTS);
+        //endregion
 
-        // Hardened
+        //region Hardened
         hardenedHelmet = new ItemRFArmor(ARMOR_MATERIAL_HARDENED, 0, Reference.Numbers.HARDENED_MAX_ENERGY, Reference.Numbers.HARDENED_MAX_TRANSFER, ItemRFArmor.ArmorMetal.HARDENED).setUnlocalizedName(Reference.Names.HARDENED_HELMET).setTextureName(Reference.MODID + ":" + Reference.Names.HARDENED_HELMET);
         hardenedChest = new ItemRFArmor(ARMOR_MATERIAL_HARDENED, 1, Reference.Numbers.HARDENED_MAX_ENERGY, Reference.Numbers.HARDENED_MAX_TRANSFER, ItemRFArmor.ArmorMetal.HARDENED).setUnlocalizedName(Reference.Names.HARDENED_CHEST).setTextureName(Reference.MODID + ":" + Reference.Names.HARDENED_CHEST);
         hardenedLegs = new ItemRFArmor(ARMOR_MATERIAL_HARDENED, 2, Reference.Numbers.HARDENED_MAX_ENERGY, Reference.Numbers.HARDENED_MAX_TRANSFER, ItemRFArmor.ArmorMetal.HARDENED).setUnlocalizedName(Reference.Names.HARDENED_LEGS).setTextureName(Reference.MODID + ":" + Reference.Names.HARDENED_LEGS);
@@ -60,8 +61,9 @@ public class ModItems
         registerItem(hardenedHelmet, Reference.Names.HARDENED_CHEST);
         registerItem(hardenedLegs, Reference.Names.HARDENED_LEGS);
         registerItem(hardenedBoots, Reference.Names.HARDENED_BOOTS);
+        //endregion
 
-        // Redstone
+        //region Redstone
         redstoneHelmet = new ItemRFArmor(ARMOR_MATERIAL_REDSTONE, 0, Reference.Numbers.REDSTONE_MAX_ENERGY, Reference.Numbers.REDSTONE_MAX_TRANSFER, ItemRFArmor.ArmorMetal.REDSTONE).setUnlocalizedName(Reference.Names.REDSTONE_HELMET).setTextureName(Reference.MODID + ":" + Reference.Names.REDSTONE_HELMET);
         redstoneChest = new ItemRFArmor(ARMOR_MATERIAL_REDSTONE, 1, Reference.Numbers.REDSTONE_MAX_ENERGY, Reference.Numbers.REDSTONE_MAX_TRANSFER, ItemRFArmor.ArmorMetal.REDSTONE).setUnlocalizedName(Reference.Names.REDSTONE_CHEST).setTextureName(Reference.MODID + ":" + Reference.Names.REDSTONE_CHEST);
         redstoneLegs = new ItemRFArmor(ARMOR_MATERIAL_REDSTONE, 2, Reference.Numbers.REDSTONE_MAX_ENERGY, Reference.Numbers.REDSTONE_MAX_TRANSFER, ItemRFArmor.ArmorMetal.REDSTONE).setUnlocalizedName(Reference.Names.REDSTONE_LEGS).setTextureName(Reference.MODID + ":" + Reference.Names.REDSTONE_LEGS);
@@ -71,6 +73,19 @@ public class ModItems
         registerItem(redstoneChest, Reference.Names.REDSTONE_CHEST);
         registerItem(redstoneLegs, Reference.Names.REDSTONE_LEGS);
         registerItem(redstoneBoots, Reference.Names.REDSTONE_BOOTS);
+        //endregion
+
+        //region Resonant
+        resonantHelmet = new ItemRFArmor(ARMOR_MATERIAL_RESONANT, 0, Reference.Numbers.RESONANT_MAX_ENERGY, Reference.Numbers.RESONANT_MAX_TRANSFER, ItemRFArmor.ArmorMetal.RESONANT).setUnlocalizedName(Reference.Names.RESONANT_HELMET).setTextureName(Reference.MODID + ":" + Reference.Names.RESONANT_HELMET);
+        resonantChest = new ItemRFArmor(ARMOR_MATERIAL_RESONANT, 1, Reference.Numbers.RESONANT_MAX_ENERGY, Reference.Numbers.RESONANT_MAX_TRANSFER, ItemRFArmor.ArmorMetal.RESONANT).setUnlocalizedName(Reference.Names.RESONANT_CHEST).setTextureName(Reference.MODID + ":" + Reference.Names.RESONANT_CHEST);
+        resonantLegs = new ItemRFArmor(ARMOR_MATERIAL_RESONANT, 2, Reference.Numbers.RESONANT_MAX_ENERGY, Reference.Numbers.RESONANT_MAX_TRANSFER, ItemRFArmor.ArmorMetal.RESONANT).setUnlocalizedName(Reference.Names.RESONANT_LEGS).setTextureName(Reference.MODID + ":" + Reference.Names.RESONANT_LEGS);
+        resonantBoots = new ItemRFArmor(ARMOR_MATERIAL_RESONANT, 3, Reference.Numbers.RESONANT_MAX_ENERGY, Reference.Numbers.RESONANT_MAX_TRANSFER, ItemRFArmor.ArmorMetal.RESONANT).setUnlocalizedName(Reference.Names.RESONANT_BOOTS).setTextureName(Reference.MODID + ":" + Reference.Names.RESONANT_BOOTS);
+
+        registerItem(resonantHelmet, Reference.Names.RESONANT_HELMET);
+        registerItem(resonantChest, Reference.Names.RESONANT_CHEST);
+        registerItem(resonantLegs, Reference.Names.RESONANT_LEGS);
+        registerItem(resonantBoots, Reference.Names.RESONANT_BOOTS);
+        //endregion
     }
 
     private static void registerItem(Item item, String name)

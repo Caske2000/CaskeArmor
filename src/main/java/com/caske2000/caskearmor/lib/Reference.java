@@ -29,6 +29,11 @@ public final class Reference
         public static final String REDSTONE_HELMET = "redstoneHelmet";
         public static final String REDSTONE_LEGS = "redstoneLegs";
         public static final String REDSTONE_BOOTS = "redstoneBoots";
+
+        public static final String RESONANT_CHEST = "resonantChestplate";
+        public static final String RESONANT_HELMET = "resonantHelmet";
+        public static final String RESONANT_LEGS = "resonantLegs";
+        public static final String RESONANT_BOOTS = "resonantBoots";
     }
 
     public static final class Numbers

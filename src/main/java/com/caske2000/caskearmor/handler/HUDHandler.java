@@ -17,14 +17,23 @@ import java.util.List;
 
 public class HUDHandler extends Gui
 {
-
-    // TODO Fix Graphical Output (not only showing chestplate)
-
     // Had Problems using the COFH Resource, just made a copy
     private static final ResourceLocation POWERBAR_V = new ResourceLocation("caskearmor", "textures/hud/energy_V.png");
     private static final ResourceLocation POWERBAR_H = new ResourceLocation("caskearmor", "textures/hud/energy_H.png");
     public static final HUDHandler instance = new HUDHandler();
     private static final Minecraft mc = Minecraft.getMinecraft();
+
+    @SubscribeEvent
+    public void RenderGameOverlayEvent(RenderGameOverlayEvent event)
+    {
+        if (event.type == RenderGameOverlayEvent.ElementType.TEXT)
+        {
+            renderHUD();
+        } else if (event.type == RenderGameOverlayEvent.ElementType.HOTBAR)
+        {
+            renderPowerBar();
+        }
+    }
 
     public static void renderHUD()
     {
@@ -74,18 +83,7 @@ public class HUDHandler extends Gui
         mc.fontRenderer.drawStringWithShadow(str, 2, yPos, 0x13A8F2);
     }
 
-    @SubscribeEvent
-    public void RenderGameOverlayEvent(RenderGameOverlayEvent event)
-    {
-        if (event.type == RenderGameOverlayEvent.ElementType.TEXT)
-        {
-            renderHUD();
-        } else if (event.type == RenderGameOverlayEvent.ElementType.HOTBAR)
-        {
-            renderPowerBar();
-        }
-    }
-
+    //region Powerbar
     private void renderPowerBar()
     {
         if ((mc.inGameHasFocus || (mc.currentScreen != null && (mc.currentScreen instanceof GuiChat))) && !mc.gameSettings.showDebugInfo)
@@ -170,4 +168,5 @@ public class HUDHandler extends Gui
         this.drawTexturedModalRect(x, y, 0, 0, 10, 100 - perc);
         this.drawTexturedModalRect(x, y + 100 - perc, 128, 0, 10, perc);
     }
+    //endregion
 }
