@@ -14,6 +14,13 @@ item.redstoneChestplate.name=§6Redstone Borstplaat§r
 item.redstoneLegs.name=§6Redstone Beenbeschermers§r
 item.redstoneBoots.name=§6Redstone Laarzen§r
 
+item.resonantHelmet.name=§1Resonerende Helm§r
+item.resonantChestplate.name=§1Resonerende Borstplaat§r
+item.resonantLegs.name=§1Resonerende Beenbeschermers§r
+item.resonantBoots.name=§1Resonerende Laarzen§r
+
+item.energyCore.name=Energiekern (Heeft dit item wel een nut?)
+
 # Creative Tab
 itemGroup.caskearmor=Caske Wapenuitrusing
 

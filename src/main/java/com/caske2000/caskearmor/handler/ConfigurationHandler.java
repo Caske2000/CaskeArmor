@@ -9,10 +9,12 @@ import java.io.File;
 
 public class ConfigurationHandler
 {
+    public static final String CATEGORY_CASKE = "caske";
     public static Configuration config;
+    public static boolean enableHUD;
+    public static boolean extendedHUD;
     public static int HUDLayout;
     public static int HUDPosition;
-    public static boolean extendedHUD;
 
     public static void init(File configFile)
     {
@@ -25,9 +27,10 @@ public class ConfigurationHandler
 
     private static void loadConfigs()
     {
-        HUDLayout = config.getInt("HUDLayout", Configuration.CATEGORY_GENERAL, 1, 1, 2, "1 = Horizontal, 2 = Vertical");
-        HUDPosition = config.getInt("HUDPosition", Configuration.CATEGORY_GENERAL, 1, 1, 3, "1 = Top, 2 = Center, 3 = Bottom");
-        extendedHUD = config.getBoolean("extendedHUD", Configuration.CATEGORY_GENERAL, true, "Do you want to show an extended HUD?");
+        enableHUD = config.getBoolean("enableHUD", CATEGORY_CASKE, true, "Do you want to enable the ingame HUD?");
+        extendedHUD = config.getBoolean("extendedHUD", CATEGORY_CASKE, true, "Do you want to show an extended HUD?");
+        HUDLayout = config.getInt("HUDLayout", CATEGORY_CASKE, 1, 1, 2, "1 = Horizontal, 2 = Vertical");
+        HUDPosition = config.getInt("HUDPosition", CATEGORY_CASKE, 1, 1, 3, "1 = Top, 2 = Center, 3 = Bottom");
         if (config.hasChanged())
             config.save();
     }

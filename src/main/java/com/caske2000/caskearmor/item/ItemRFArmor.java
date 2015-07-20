@@ -4,38 +4,110 @@ import cofh.api.energy.IEnergyContainerItem;
 import cofh.core.item.ItemArmorAdv;
 import cofh.lib.util.helpers.MathHelper;
 import cofh.lib.util.helpers.StringHelper;
+import com.caske2000.caskearmor.client.model.CustomArmorModel;
 import com.caske2000.caskearmor.creativetab.CreativeTab;
 import com.caske2000.caskearmor.handler.ConfigurationHandler;
+import com.caske2000.caskearmor.lib.Reference;
 import com.caske2000.caskearmor.util.CStringHelper;
 import com.caske2000.caskearmor.util.NBTHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.model.ModelBiped;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
+import net.minecraft.world.World;
 import net.minecraftforge.common.ISpecialArmor;
 
 import java.util.List;
 
-public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, ISpecialArmor, IHUDInfoItem
+public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, ISpecialArmor, IItemRFUpgradable
 {
+    ModelBiped model = null;
     // TODO Own the code!
     private int maxEnergy;
     private int maxTransfer;
     private ArmorMetal armorMetal;
+    private int upgradeSlots;
 
-    public ItemRFArmor(ArmorMaterial material, int type, int maxEnergy, int maxTransfer, ArmorMetal metal)
+    public ItemRFArmor(ArmorMaterial material, int type, int maxEnergy, int maxTransfer, ArmorMetal metal, int upgradeSlots)
     {
         super(material, type);
         this.maxEnergy = maxEnergy;
         this.maxTransfer = maxTransfer;
         this.armorMetal = metal;
+        this.upgradeSlots = upgradeSlots;
         setCreativeTab(CreativeTab.CASKE_TAB);
+        setMaxStackSize(1);
+    }
+
+    @Override
+    public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack)
+    {
+        if (player.getCurrentArmor(1).getItem() instanceof ItemRFArmor)         // LEGGINGS
+        {
+            if (player.getCurrentArmor(1).getTagCompound().getBoolean("SPEED"))
+                player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 3, 3));
+        }
+    }
+
+    @Override
+    public String getArmorTexture(ItemStack itemstack, Entity entity, int slot, String type)
+    {
+        switch (slot)
+        {
+            case 2:
+                return Reference.MODID + ":models/armor/tester_layer_2.png"; //2 should be the slot for legs
+            default:
+                return Reference.MODID + ":models/armor/tester_layer_1.png";
+        }
+    }
+
+    // Took from Blood Magic mod for testing
+    @Override
+    @SideOnly(Side.CLIENT)
+    public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, int armorSlot)
+    {
+        if (itemStack != null && (itemStack.getItem() instanceof ItemRFArmor))
+        {
+            int type = ((ItemArmor) itemStack.getItem()).armorType;
+            if (type == 1 || type == 3)
+            {
+                model = new CustomArmorModel(1.0f, true);
+            } else
+            {
+                model = new CustomArmorModel(0.5f, false);
+            }
+        }
+        if (model != null)
+        {
+            model.bipedHead.showModel = armorSlot == 0;
+            model.bipedHeadwear.showModel = armorSlot == 0;
+            model.bipedBody.showModel = armorSlot == 1 || armorSlot == 2;
+            model.bipedRightArm.showModel = armorSlot == 1;
+            model.bipedLeftArm.showModel = armorSlot == 1;
+            model.bipedRightLeg.showModel = armorSlot == 2 || armorSlot == 3;
+            model.bipedLeftLeg.showModel = armorSlot == 2 || armorSlot == 3;
+            model.isSneak = entityLiving.isSneaking();
+            model.isRiding = entityLiving.isRiding();
+            model.isChild = entityLiving.isChild();
+            model.heldItemRight = entityLiving.getEquipmentInSlot(0) != null ? 1 : 0;
+            if (entityLiving instanceof EntityPlayer)
+            {
+                model.aimedBow = ((EntityPlayer) entityLiving).getItemInUseDuration() > 2;
+            }
+            return model;
+        }
+        return model;
     }
 
     @Override
@@ -47,16 +119,18 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
     @Override
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean check)
     {
+        if (stack.getTagCompound() == null)
+            NBTHelper.setInteger(stack, "ENERGY", 0);
 
         if (stack.getTagCompound().getInteger("MAX_ENERGY") == 0)
             NBTHelper.setInteger(stack, "MAX_ENERGY", maxEnergy);
 
-        if (stack.getTagCompound() == null)
-            NBTHelper.setInteger(stack, "ENERGY", 0);
         if (StringHelper.isShiftKeyDown())
         {
             list.add(CStringHelper.localize("info.caske.energy") + ": " + stack.stackTagCompound.getInteger("ENERGY") + " / " + maxEnergy + " RF");
             list.add(CStringHelper.localize("info.caske.io") + ": " + maxTransfer + " RF/t");
+            if (stack.getTagCompound().getBoolean("SPEED") != false)
+                list.add(stack.getTagCompound().getBoolean("SPEED"));
         } else
         {
             list.add(CStringHelper.shiftForInfo());

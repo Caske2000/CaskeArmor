@@ -22,11 +22,25 @@ public abstract class NBTHelper
         }
     }
 
+    public static NBTTagCompound getNBT(ItemStack stack)
+    {
+        initNBTTagCompound(stack);
+
+        return stack.stackTagCompound;
+    }
+
     public static void setInteger(ItemStack itemStack, String keyName, int keyValue)
     {
         initNBTTagCompound(itemStack);
 
         itemStack.stackTagCompound.setInteger(keyName, keyValue);
+    }
+
+    public static void setBoolean(ItemStack itemStack, String keyName, boolean keyValue)
+    {
+        initNBTTagCompound(itemStack);
+
+        itemStack.stackTagCompound.setBoolean(keyName, keyValue);
     }
 
 }

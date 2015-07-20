@@ -14,6 +14,13 @@ item.redstoneChestplate.name=§6Redstone Chestplate§r
 item.redstoneLegs.name=§6Redstone Leggings§r
 item.redstoneBoots.name=§6Redstone Boots§r
 
+item.resonantHelmet.name=§1Resonant Helmet§r
+item.resonantChestplate.name=§1Resonant Chestplate§r
+item.resonantLegs.name=§1Resonant Leggings§r
+item.resonantBoots.name=§1Resonant Boots§r
+
+item.energyCore.name=Energy Core (Crafting Item)
+
 # Creative Tab
 itemGroup.caskearmor=Caske Armor
 
