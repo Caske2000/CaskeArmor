@@ -9,6 +9,7 @@ import com.caske2000.caskearmor.creativetab.CreativeTab;
 import com.caske2000.caskearmor.handler.ConfigurationHandler;
 import com.caske2000.caskearmor.lib.Reference;
 import com.caske2000.caskearmor.util.CStringHelper;
+import com.caske2000.caskearmor.util.LogHelper;
 import com.caske2000.caskearmor.util.NBTHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -53,23 +54,27 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
     @Override
     public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack)
     {
-        if (player.getCurrentArmor(3).getItem() != null)
+        ItemRFArmor armor = null;
+        if (itemStack.getItem() instanceof ItemRFArmor)
         {
-            if (player.getCurrentArmor(3).getItem() instanceof ItemRFArmor && player.getCurrentArmor(3).stackTagCompound.hasKey("NIGHT_VISION"))         // HELMET
+            armor = (ItemRFArmor) itemStack.getItem();
+            if (armor.armorType == 0)                                                       // HELMET
             {
-                if (player.getCurrentArmor(3).stackTagCompound.getBoolean("NIGHT_VISION"))
-                    player.addPotionEffect(new PotionEffect(Potion.nightVision.id, 3, 1));
+                if (itemStack.stackTagCompound.hasKey("NIGHT_VISION"))
+                {
+                    if (itemStack.stackTagCompound.getBoolean("NIGHT_VISION"))
+                        player.addPotionEffect(new PotionEffect(Potion.nightVision.id, 1, 0));
 
+                }
             }
-        }
-
-        if (player.getCurrentArmor(1).getItem() != null)
-        {
-            if (player.getCurrentArmor(1).getItem() instanceof ItemRFArmor && player.getCurrentArmor(1).stackTagCompound.hasKey("SPEED"))         // LEGGINGS
+            else if (armor.armorType == 2)                                                  // LEGGINGS
             {
-                if (player.getCurrentArmor(1).stackTagCompound.getBoolean("SPEED"))
-                    player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 3, 2));
+                if (itemStack.stackTagCompound.hasKey("SPEED"))
+                {
+                    if (itemStack.stackTagCompound.getBoolean("SPEED"))
+                        player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 1, 2));
 
+                }
             }
         }
     }

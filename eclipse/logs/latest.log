@@ -1,46 +1,35 @@
-[12:28:06] [main/INFO]: Setting user: Player239
-[12:28:08] [Client thread/INFO]: LWJGL Version: 2.9.1
-[12:28:14] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Caske Armor, FMLFileResourcePack:CoFH Core, FMLFileResourcePack:Thermal Dynamics, FMLFileResourcePack:Thermal Expansion, FMLFileResourcePack:Thermal Foundation
-[12:28:15] [Sound Library Loader/INFO]: Sound engine started
-[12:28:16] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
-[12:28:16] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[12:28:18] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Caske Armor, FMLFileResourcePack:CoFH Core, FMLFileResourcePack:Thermal Dynamics, FMLFileResourcePack:Thermal Expansion, FMLFileResourcePack:Thermal Foundation
-[12:28:18] [Client thread/INFO]: Created: 512x512 textures/blocks-atlas
-[12:28:19] [Client thread/INFO]: Created: 1024x512 textures/items-atlas
-[12:28:19] [Sound Library Loader/INFO]: Sound engine started
-[12:28:20] [Client thread/ERROR]: ########## GL ERROR ##########
-[12:28:20] [Client thread/ERROR]: @ Post startup
-[12:28:20] [Client thread/ERROR]: 1286: Invalid framebuffer operation
-[12:28:23] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[12:28:23] [Server thread/INFO]: Generating keypair
-[12:28:23] [Server thread/INFO]: Preparing start region for level 0
-[12:28:24] [Server thread/INFO]: Player239[local:E:960b3d91] logged in with entity id 299 at (127.96242615950192, 70.0, 259.8296009896109)
-[12:28:24] [Server thread/INFO]: Player239 joined the game
-[12:28:25] [Server thread/ERROR]: Encountered an unexpected exception
-net.minecraft.util.ReportedException: Ticking player
-	at net.minecraft.network.NetworkSystem.networkTick(NetworkSystem.java:198) ~[NetworkSystem.class:?]
-	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:726) ~[MinecraftServer.class:?]
-	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614) ~[MinecraftServer.class:?]
-	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118) ~[IntegratedServer.class:?]
-	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485) [MinecraftServer.class:?]
-	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752) [MinecraftServer$2.class:?]
-Caused by: java.lang.NullPointerException
-	at com.caske2000.caskearmor.item.ItemRFArmor.onArmorTick(ItemRFArmor.java:66) ~[ItemRFArmor.class:?]
-	at net.minecraft.entity.player.InventoryPlayer.decrementAnimations(InventoryPlayer.java:355) ~[InventoryPlayer.class:?]
-	at net.minecraft.entity.player.EntityPlayer.onLivingUpdate(EntityPlayer.java:610) ~[EntityPlayer.class:?]
-	at net.minecraft.entity.EntityLivingBase.onUpdate(EntityLivingBase.java:1816) ~[EntityLivingBase.class:?]
-	at net.minecraft.entity.player.EntityPlayer.onUpdate(EntityPlayer.java:327) ~[EntityPlayer.class:?]
-	at net.minecraft.entity.player.EntityPlayerMP.onUpdateEntity(EntityPlayerMP.java:330) ~[EntityPlayerMP.class:?]
-	at net.minecraft.network.NetHandlerPlayServer.processPlayer(NetHandlerPlayServer.java:329) ~[NetHandlerPlayServer.class:?]
-	at net.minecraft.network.play.client.C03PacketPlayer.processPacket(C03PacketPlayer.java:37) ~[C03PacketPlayer.class:?]
-	at net.minecraft.network.play.client.C03PacketPlayer$C06PacketPlayerPosLook.processPacket(C03PacketPlayer.java:271) ~[C03PacketPlayer$C06PacketPlayerPosLook.class:?]
-	at net.minecraft.network.NetworkManager.processReceivedPackets(NetworkManager.java:241) ~[NetworkManager.class:?]
-	at net.minecraft.network.NetworkSystem.networkTick(NetworkSystem.java:182) ~[NetworkSystem.class:?]
-	... 5 more
-[12:28:25] [Server thread/ERROR]: This crash report has been saved to: C:\Users\Caske2000\Desktop\Modding Workspace\CaskeArmor\eclipse\.\crash-reports\crash-2015-07-22_12.28.25-server.txt
-[12:28:25] [Server thread/INFO]: Stopping server
-[12:28:25] [Server thread/INFO]: Saving players
-[12:28:25] [Server thread/INFO]: Saving worlds
-[12:28:25] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[12:28:25] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[12:28:25] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[17:44:21] [main/INFO]: Setting user: Player60
+[17:44:23] [Client thread/INFO]: LWJGL Version: 2.9.1
+[17:44:28] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Caske Armor, FMLFileResourcePack:CoFH Core, FMLFileResourcePack:Thermal Dynamics, FMLFileResourcePack:Thermal Expansion, FMLFileResourcePack:Thermal Foundation
+[17:44:30] [Sound Library Loader/INFO]: Sound engine started
+[17:44:31] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[17:44:31] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[17:44:32] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Caske Armor, FMLFileResourcePack:CoFH Core, FMLFileResourcePack:Thermal Dynamics, FMLFileResourcePack:Thermal Expansion, FMLFileResourcePack:Thermal Foundation
+[17:44:33] [Client thread/INFO]: Created: 512x512 textures/blocks-atlas
+[17:44:33] [Client thread/INFO]: Created: 1024x512 textures/items-atlas
+[17:44:34] [Sound Library Loader/INFO]: Sound engine started
+[17:44:34] [Client thread/ERROR]: ########## GL ERROR ##########
+[17:44:34] [Client thread/ERROR]: @ Post startup
+[17:44:34] [Client thread/ERROR]: 1286: Invalid framebuffer operation
+[17:44:40] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[17:44:40] [Server thread/INFO]: Generating keypair
+[17:44:40] [Server thread/INFO]: Preparing start region for level 0
+[17:44:41] [Server thread/INFO]: Player60[local:E:d62ef55a] logged in with entity id 293 at (129.42560405195073, 64.0, 264.06939944209046)
+[17:44:41] [Server thread/INFO]: Player60 joined the game
+[17:44:46] [Server thread/INFO]: Player60 has just earned the achievement [Taking Inventory]
+[17:44:46] [Client thread/INFO]: [CHAT] Player60 has just earned the achievement [Taking Inventory]
+[17:45:24] [Server thread/INFO]: [Player60: Given [Potion of Strength] * 1 to Player60]
+[17:45:24] [Client thread/INFO]: [CHAT] Given [Potion of Strength] * 1 to Player60
+[17:45:35] [Server thread/INFO]: [Player60: Given [Milk Bucket] * 1 to Player60]
+[17:45:35] [Client thread/INFO]: [CHAT] Given [Milk Bucket] * 1 to Player60
+[17:45:55] [Server thread/INFO]: Saving and pausing game...
+[17:45:55] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[17:45:55] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[17:45:55] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[17:45:55] [Server thread/INFO]: Stopping server
+[17:45:55] [Server thread/INFO]: Saving players
+[17:45:55] [Server thread/INFO]: Saving worlds
+[17:45:55] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[17:45:55] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[17:45:55] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[17:45:57] [Client thread/INFO]: Stopping!
