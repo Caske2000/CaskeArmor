@@ -63,15 +63,4 @@ public final class CStringHelper
     {
         return StatCollector.translateToLocal(var0);
     }
-
-    // Energy Stuff
-
-    public static ItemStack setDefaultEnergyTag(ItemStack stack, int energy)
-    {
-        if (stack.stackTagCompound == null)
-            stack.setTagCompound(new NBTTagCompound());
-
-        stack.stackTagCompound.setInteger("ENERGY", energy);
-        return stack;
-    }
 }

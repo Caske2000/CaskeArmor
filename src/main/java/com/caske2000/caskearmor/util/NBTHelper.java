@@ -17,16 +17,14 @@ public abstract class NBTHelper
     private static void initNBTTagCompound(ItemStack itemStack)
     {
         if (itemStack.stackTagCompound == null)
-        {
             itemStack.setTagCompound(new NBTTagCompound());
-        }
     }
 
-    public static NBTTagCompound getNBT(ItemStack stack)
+    public static NBTTagCompound getNBT(ItemStack itemStack)
     {
-        initNBTTagCompound(stack);
+        initNBTTagCompound(itemStack);
 
-        return stack.stackTagCompound;
+        return itemStack.getTagCompound();
     }
 
     public static void setInteger(ItemStack itemStack, String keyName, int keyValue)
@@ -43,4 +41,12 @@ public abstract class NBTHelper
         itemStack.stackTagCompound.setBoolean(keyName, keyValue);
     }
 
+    public static ItemStack setDefaultEnergyTag(ItemStack stack, int energy)
+    {
+        if (stack.stackTagCompound == null)
+            stack.setTagCompound(new NBTTagCompound());
+
+        stack.stackTagCompound.setInteger("ENERGY", energy);
+        return stack;
+    }
 }

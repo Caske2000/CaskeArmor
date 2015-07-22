@@ -34,7 +34,9 @@ public final class Reference
         public static final String RESONANT_HELMET = "resonantHelmet";
         public static final String RESONANT_LEGS = "resonantLegs";
         public static final String RESONANT_BOOTS = "resonantBoots";
+
         public static final String ENERGY_CORE = "energyCore";
+        public static final String ARMOR_UPGRADE = "armorUpgrade";
     }
 
     public static final class Numbers

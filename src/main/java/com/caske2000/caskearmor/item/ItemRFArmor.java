@@ -53,13 +53,28 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
     @Override
     public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack)
     {
-        if (player.getCurrentArmor(1).getItem() instanceof ItemRFArmor)         // LEGGINGS
+        if (player.getCurrentArmor(3).getItem() != null)
         {
-            if (player.getCurrentArmor(1).getTagCompound().getBoolean("SPEED"))
-                player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 3, 3));
+            if (player.getCurrentArmor(3).getItem() instanceof ItemRFArmor && player.getCurrentArmor(3).stackTagCompound.hasKey("NIGHT_VISION"))         // HELMET
+            {
+                if (player.getCurrentArmor(3).stackTagCompound.getBoolean("NIGHT_VISION"))
+                    player.addPotionEffect(new PotionEffect(Potion.nightVision.id, 3, 1));
+
+            }
+        }
+
+        if (player.getCurrentArmor(1).getItem() != null)
+        {
+            if (player.getCurrentArmor(1).getItem() instanceof ItemRFArmor && player.getCurrentArmor(1).stackTagCompound.hasKey("SPEED"))         // LEGGINGS
+            {
+                if (player.getCurrentArmor(1).stackTagCompound.getBoolean("SPEED"))
+                    player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 3, 2));
+
+            }
         }
     }
 
+    //region Armor Rendering
     @Override
     public String getArmorTexture(ItemStack itemstack, Entity entity, int slot, String type)
     {
@@ -109,12 +124,7 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
         }
         return model;
     }
-
-    @Override
-    public boolean getIsRepairable(ItemStack itemToRepair, ItemStack stack)
-    {
-        return false;
-    }
+    //endregion
 
     @Override
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean check)
@@ -129,14 +139,13 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
         {
             list.add(CStringHelper.localize("info.caske.energy") + ": " + stack.stackTagCompound.getInteger("ENERGY") + " / " + maxEnergy + " RF");
             list.add(CStringHelper.localize("info.caske.io") + ": " + maxTransfer + " RF/t");
-            if (stack.getTagCompound().getBoolean("SPEED") != false)
-                list.add(stack.getTagCompound().getBoolean("SPEED"));
         } else
         {
             list.add(CStringHelper.shiftForInfo());
         }
     }
 
+    //region Energystuff
     // Copied from the RedstoneArsenal repository
     @Override
     public int receiveEnergy(ItemStack stack, int maxReceive, boolean simulate)
@@ -185,6 +194,7 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
     {
         return maxEnergy;
     }
+    //endregion
 
     // Copied from the RedstoneArsenal repository
     @Override
@@ -237,31 +247,11 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
     }
 
     @Override
-    public int getMaxDamage(ItemStack stack)
-    {
-        return maxEnergy;
-    }
-
-    @Override
     public int getDisplayDamage(ItemStack stack)
     {
         if (stack.stackTagCompound == null)
             NBTHelper.setInteger(stack, "ENERGY", 0);
         return maxEnergy - stack.stackTagCompound.getInteger("ENERGY");
-    }
-
-    @Override
-    public boolean showDurabilityBar(ItemStack stack)
-    {
-        return true;
-    }
-
-    // Copied from the RedstoneArsenal repository, to add an item without energy and one with
-    @Override
-    public void getSubItems(Item item, CreativeTabs tab, List list)
-    {
-        list.add(CStringHelper.setDefaultEnergyTag(new ItemStack(item, 1, 0), 0));
-        list.add(CStringHelper.setDefaultEnergyTag(new ItemStack(item, 1, 0), maxEnergy));
     }
 
     // TODO maybe add isDamaged
@@ -296,6 +286,32 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
                 break;
         }
         return absorbRatio;
+    }
+
+    // Used to add an item without energy and one with, new Itemstack(ITEM, STACKSIZE, METADATA)
+    @Override
+    public void getSubItems(Item item, CreativeTabs tab, List list)
+    {
+        list.add(NBTHelper.setDefaultEnergyTag(new ItemStack(item, 1, 0), 0));
+        list.add(NBTHelper.setDefaultEnergyTag(new ItemStack(item, 1, 0), maxEnergy));
+    }
+
+    @Override
+    public boolean showDurabilityBar(ItemStack stack)
+    {
+        return true;
+    }
+
+    @Override
+    public int getMaxDamage(ItemStack stack)
+    {
+        return maxEnergy;
+    }
+
+    @Override
+    public boolean getIsRepairable(ItemStack itemToRepair, ItemStack stack)
+    {
+        return false;
     }
 
     public enum ArmorMetal

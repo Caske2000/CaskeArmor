@@ -20,6 +20,8 @@ item.resonantLegs.name=§1Resonerende Beenbeschermers§r
 item.resonantBoots.name=§1Resonerende Laarzen§r
 
 item.energyCore.name=Energiekern (Heeft dit item wel een nut?)
+item.armorUpgrade.SPEED.name=Wapenuitrustingsupgrade (Snelheid)
+item.armorUpgrade.NIGHT_VISION.name=Wapenuitrustingsupgrade (Nachtzicht)
 
 # Creative Tab
 itemGroup.caskearmor=Caske Wapenuitrusing

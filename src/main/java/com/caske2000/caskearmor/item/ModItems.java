@@ -44,8 +44,8 @@ public class ModItems
     public static Item resonantLegs;
     public static Item resonantBoots;
 
-
     public static Item energyCore;
+    public static Item armorUpgrade;
 
     public static void preInit()
     {
@@ -101,8 +101,10 @@ public class ModItems
         //endregion
 
         energyCore = new ItemSimpleFoiled().setUnlocalizedName(Reference.Names.ENERGY_CORE).setTextureName(Reference.MODID + ":" + Reference.Names.ENERGY_CORE).setCreativeTab(CreativeTab.CASKE_TAB);
-
         registerItem(energyCore, Reference.Names.ENERGY_CORE);
+
+        armorUpgrade = new ItemArmorUpgrade();
+        registerItem(armorUpgrade, Reference.Names.ARMOR_UPGRADE);
     }
 
     public static void init()
@@ -134,7 +136,8 @@ public class ModItems
         GameRegistry.addRecipe(new ShapedOreRecipe(resonantBoots, new Object[]{"   ", "IVI", "I I", 'I', "ingotEnderium", 'V', energyCore}));
         //endregion Recipes
 
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(leadstoneLegs, 1), new Object[]{leadstoneLegs, Items.sugar}));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(leadstoneLegs, 1), 0, new Object[]{leadstoneLegs, new ItemStack(armorUpgrade, 1, 0)}));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(leadstoneHelmet, 1), 0, new Object[]{leadstoneHelmet, new ItemStack(armorUpgrade, 1, 1)}));
     }
 
     private static void registerItem(Item item, String name)

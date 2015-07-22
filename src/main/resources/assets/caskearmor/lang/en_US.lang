@@ -20,6 +20,8 @@ item.resonantLegs.name=§1Resonant Leggings§r
 item.resonantBoots.name=§1Resonant Boots§r
 
 item.energyCore.name=Energy Core (Crafting Item)
+item.armorUpgrade.SPEED.name=Armor Upgrade (Speed)
+item.armorUpgrade.NIGHT_VISION.name=Armor Upgrade (Night Vision)
 
 # Creative Tab
 itemGroup.caskearmor=Caske Armor
