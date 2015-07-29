@@ -18,17 +18,15 @@ public class ArmorUpgrade extends ShapelessOreRecipe
 {
     private final IEnergyContainerItem resultItem;
     private final int itemMeta;
-    public static final String[] upgradeTypes = new String[]{"SPEED", "NIGHT_VISION"};
-    private String upgrade;
+    public static final String[] upgradeTypes = new String[]{"SPEED", "NIGHT_VISION", "AUTO_FEEDER"};
 
     private List<String> unappliedUpgrades = new ArrayList<String>();
 
-    public ArmorUpgrade(ItemStack result, int upgradeType, Object... recipe)
+    public ArmorUpgrade(ItemStack result, Object... recipe)
     {
         super(result, recipe);
         this.resultItem = (IEnergyContainerItem) result.getItem();
         this.itemMeta = result.getItemDamage();
-        this.upgrade = upgradeTypes[upgradeType];
     }
 
     @Override

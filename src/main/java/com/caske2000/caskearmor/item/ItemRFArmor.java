@@ -9,7 +9,6 @@ import com.caske2000.caskearmor.creativetab.CreativeTab;
 import com.caske2000.caskearmor.handler.ConfigurationHandler;
 import com.caske2000.caskearmor.lib.Reference;
 import com.caske2000.caskearmor.util.CStringHelper;
-import com.caske2000.caskearmor.util.LogHelper;
 import com.caske2000.caskearmor.util.NBTHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -38,7 +37,9 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
     private int maxEnergy;
     private int maxTransfer;
     private ArmorMetal armorMetal;
+    // TODO Add upgradeSlots
     private int upgradeSlots;
+    private int defaultEnergy = 3;      // The default energy cost of a upgrademodule in RF/t
 
     public ItemRFArmor(ArmorMaterial material, int type, int maxEnergy, int maxTransfer, ArmorMetal metal, int upgradeSlots)
     {
@@ -54,28 +55,51 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
     @Override
     public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack)
     {
-        ItemRFArmor armor = null;
+        //TODO check if plenty of energy
+        int energyConsumed = 0;
+        ItemRFArmor armor;
         if (itemStack.getItem() instanceof ItemRFArmor)
         {
             armor = (ItemRFArmor) itemStack.getItem();
-            if (armor.armorType == 0)                                                       // HELMET
+            switch (armor.armorType)
             {
-                if (itemStack.stackTagCompound.hasKey("NIGHT_VISION"))
-                {
-                    if (itemStack.stackTagCompound.getBoolean("NIGHT_VISION"))
-                        player.addPotionEffect(new PotionEffect(Potion.nightVision.id, 1, 0));
+                case 0:
+                    if (itemStack.stackTagCompound.hasKey("NIGHT_VISION"))
+                    {
+                        if (itemStack.stackTagCompound.getBoolean("NIGHT_VISION"))
+                        {
+                            player.addPotionEffect(new PotionEffect(Potion.nightVision.id, 1, 0));
+                            energyConsumed += defaultEnergy;
+                        }
+                    }
+                    if (itemStack.stackTagCompound.hasKey("AUTO_FEEDER"))
+                    {
+                        if (itemStack.stackTagCompound.getBoolean("AUTO_FEEDER"))
+                        {
+                            player.addPotionEffect(new PotionEffect(Potion.field_76443_y.id, 1, 0));
+                            energyConsumed += defaultEnergy;
+                        }
+                    }
+                    break;
 
-                }
-            }
-            else if (armor.armorType == 2)                                                  // LEGGINGS
-            {
-                if (itemStack.stackTagCompound.hasKey("SPEED"))
-                {
-                    if (itemStack.stackTagCompound.getBoolean("SPEED"))
-                        player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 1, 2));
+                case 1:
+                    break;
 
-                }
+                case 2:
+                    if (itemStack.stackTagCompound.hasKey("SPEED"))
+                    {
+                        if (itemStack.stackTagCompound.getBoolean("SPEED"))
+                        {
+                            player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 1, 0));
+                            energyConsumed += defaultEnergy;
+                        }
+                    }
+                    break;
+
+                case 3:
+                    break;
             }
+            extractEnergy(itemStack, energyConsumed, false);
         }
     }
 
@@ -101,12 +125,10 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
         {
             int type = ((ItemArmor) itemStack.getItem()).armorType;
             if (type == 1 || type == 3)
-            {
                 model = new CustomArmorModel(1.0f, true);
-            } else
-            {
+            else
                 model = new CustomArmorModel(0.5f, false);
-            }
+
         }
         if (model != null)
         {
@@ -122,9 +144,7 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
             model.isChild = entityLiving.isChild();
             model.heldItemRight = entityLiving.getEquipmentInSlot(0) != null ? 1 : 0;
             if (entityLiving instanceof EntityPlayer)
-            {
                 model.aimedBow = ((EntityPlayer) entityLiving).getItemInUseDuration() > 2;
-            }
             return model;
         }
         return model;
@@ -132,23 +152,23 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
     //endregion
 
     @Override
-    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean check)
+     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean check)
+{
+    if (stack.getTagCompound() == null)
+        NBTHelper.setInteger(stack, "ENERGY", 0);
+
+    if (stack.getTagCompound().getInteger("MAX_ENERGY") == 0)
+        NBTHelper.setInteger(stack, "MAX_ENERGY", maxEnergy);
+
+    if (StringHelper.isShiftKeyDown())
     {
-        if (stack.getTagCompound() == null)
-            NBTHelper.setInteger(stack, "ENERGY", 0);
-
-        if (stack.getTagCompound().getInteger("MAX_ENERGY") == 0)
-            NBTHelper.setInteger(stack, "MAX_ENERGY", maxEnergy);
-
-        if (StringHelper.isShiftKeyDown())
-        {
-            list.add(CStringHelper.localize("info.caske.energy") + ": " + stack.stackTagCompound.getInteger("ENERGY") + " / " + maxEnergy + " RF");
-            list.add(CStringHelper.localize("info.caske.io") + ": " + maxTransfer + " RF/t");
-        } else
-        {
-            list.add(CStringHelper.shiftForInfo());
-        }
+        list.add(CStringHelper.localize("info.caske.energy") + ": " + stack.stackTagCompound.getInteger("ENERGY") + " / " + maxEnergy + " RF");
+        list.add(CStringHelper.localize("info.caske.io") + ": " + maxTransfer + " RF/t");
+    } else
+    {
+        list.add(CStringHelper.shiftForInfo());
     }
+}
 
     //region Energystuff
     // Copied from the RedstoneArsenal repository

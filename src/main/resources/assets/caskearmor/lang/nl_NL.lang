@@ -22,6 +22,7 @@ item.resonantBoots.name=§1Resonerende Laarzen§r
 item.energyCore.name=Energiekern (Heeft dit item wel een nut?)
 item.armorUpgrade.SPEED.name=Wapenuitrustingsupgrade (Snelheid)
 item.armorUpgrade.NIGHT_VISION.name=Wapenuitrustingsupgrade (Nachtzicht)
+item.armorUpgrade.AUTO_FEEDER.name=Wapenuitrustingsupgrade (Automatische Voeder)
 
 # Creative Tab
 itemGroup.caskearmor=Caske Wapenuitrusing
@@ -34,6 +35,7 @@ info.caske.moreInfo=ingedrukt voor meer info
 info.caske.energy=Opgeslagen Energie
 info.caske.shift=Shift
 info.caske.your=Je
+info.caske.upgrade=§6Voeg deze upgrade zeker toe aan je wapenuitrusting!
 
 # Keys
 keys.caskearmor.category=Caske Wapenuitrusing

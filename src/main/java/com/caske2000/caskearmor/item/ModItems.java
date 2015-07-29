@@ -4,7 +4,6 @@ import cofh.thermalexpansion.item.TEItems;
 import com.caske2000.caskearmor.crafting.ArmorUpgrade;
 import com.caske2000.caskearmor.creativetab.CreativeTab;
 import com.caske2000.caskearmor.lib.Reference;
-import com.caske2000.caskearmor.util.NBTHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -14,7 +13,6 @@ import net.minecraft.item.ItemSimpleFoiled;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.ShapedOreRecipe;
-import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 public class ModItems
 {
@@ -114,6 +112,10 @@ public class ModItems
     public static void postInit()
     {
         GameRegistry.addRecipe(new ShapedOreRecipe(energyCore, new Object[]{"IVI", "XLX", "IVI", 'I', Blocks.redstone_block, 'V', Items.gold_ingot, 'X', TEItems.powerCoilElectrum, 'L', TEItems.capacitorBasic}));
+        GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(armorUpgrade, 1, 0)), new Object[]{"IXI", "XVX", "IXI", 'I', new ItemStack(Items.dye, 1, 4), 'V', new ItemStack(Items.potionitem, 1, 8226), 'X', Items.gold_ingot}));
+        GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(armorUpgrade, 1, 1)), new Object[]{"IXI", "XVX", "IXI", 'I', new ItemStack(Items.dye, 1, 4), 'V', new ItemStack(Items.potionitem, 1, 8198), 'X', Items.gold_ingot}));
+        GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(armorUpgrade, 1, 2)), new Object[]{"IXI", "XVX", "IXI", 'I', new ItemStack(Items.dye, 1, 4), 'V', Items.golden_apple, 'X', Items.gold_ingot}));
+
         //region Armor Recipes
         GameRegistry.addRecipe(new ShapedOreRecipe(leadstoneHelmet, new Object[]{"IVI", "I I", 'I', "ingotLead", 'V', energyCore}));
         GameRegistry.addRecipe(new ShapedOreRecipe(leadstoneChest, new Object[]{"I I", "IVI", "III", 'I', "ingotLead", 'V', energyCore}));
@@ -136,8 +138,20 @@ public class ModItems
         GameRegistry.addRecipe(new ShapedOreRecipe(resonantBoots, new Object[]{"   ", "IVI", "I I", 'I', "ingotEnderium", 'V', energyCore}));
         //endregion Recipes
 
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(leadstoneLegs, 1), 0, new Object[]{leadstoneLegs, new ItemStack(armorUpgrade, 1, 0)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(leadstoneHelmet, 1), 0, new Object[]{leadstoneHelmet, new ItemStack(armorUpgrade, 1, 1)}));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(leadstoneLegs, 1), new Object[]{leadstoneLegs, new ItemStack(armorUpgrade, 1, 0)}));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(hardenedLegs, 1), new Object[]{hardenedLegs, new ItemStack(armorUpgrade, 1, 0)}));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(redstoneLegs, 1), new Object[]{redstoneLegs, new ItemStack(armorUpgrade, 1, 0)}));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(resonantLegs, 1), new Object[]{resonantLegs, new ItemStack(armorUpgrade, 1, 0)}));
+
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(leadstoneHelmet, 1), new Object[]{leadstoneHelmet, new ItemStack(armorUpgrade, 1, 1)}));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(hardenedHelmet, 1), new Object[]{hardenedHelmet, new ItemStack(armorUpgrade, 1, 1)}));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(redstoneHelmet, 1), new Object[]{redstoneHelmet, new ItemStack(armorUpgrade, 1, 1)}));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(resonantHelmet, 1), new Object[]{resonantHelmet, new ItemStack(armorUpgrade, 1, 1)}));
+
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(leadstoneHelmet, 1), new Object[]{leadstoneHelmet, new ItemStack(armorUpgrade, 1, 2)}));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(hardenedHelmet, 1), new Object[]{hardenedHelmet, new ItemStack(armorUpgrade, 1, 2)}));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(redstoneHelmet, 1), new Object[]{redstoneHelmet, new ItemStack(armorUpgrade, 1, 2)}));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(resonantHelmet, 1), new Object[]{resonantHelmet, new ItemStack(armorUpgrade, 1, 2)}));
     }
 
     private static void registerItem(Item item, String name)
@@ -147,4 +161,70 @@ public class ModItems
             GameRegistry.registerItem(item, name);
         }
     }
+
+    /* POTION IDs
+373:16 Awkward Potion
+373:32 Thick Potion
+373:64 Mundane Potion
+373:8193 Regeneration Potion (0:45)
+373:8194 Swiftness Potion (3:00)
+373:8195 Fire Resistance Potion (3:00)
+373:8196 Poison Potion (0:45)
+373:8197 Healing Potion
+373:8198 Night Vision Potion (3:00)
+373:8200 Weakness Potion (1:30)
+373:8201 Strength Potion (3:00)
+373:8202 Slowness Potion (1:30)
+373:8204 Harming Potion
+373:8206 Invisibility Potion (3:00)
+373:8225 Regeneration Potion II (0:22)
+373:8226 Swiftness Potion II (1:30)
+373:8228 Poison Potion II (0:22)
+373:8229 Healing Potion II
+373:8233 Strength Potion II (1:30)
+373:8236 Harming Potion II
+373:8257 Regeneration Potion (2:00)
+373:8258 Swiftness Potion (8:00)
+373:8259 Fire Resistance Potion (8:00)
+373:8260 Poison Potion (2:00)
+373:8262 Night Vision Potion (8:00)
+373:8264 Weakness Potion (4:00)
+373:8265 Strength Potion (8:00)
+373:8266 Slowness Potion (4:00)
+373:8270 Invisibility Potion (8:00)
+373:8289 Regeneration Potion II (1:00)
+373:8290 Swiftness Potion II (4:00)
+373:8292 Poison Potion II (1:00)
+373:8297 Strength Potion II (4:00)
+373:16385 Regeneration Splash (0:33)
+373:16386 Swiftness Splash (2:15)
+373:16387 Fire Resistance Splash (2:15)
+373:16388 Poison Splash (0:33)
+373:16389 Healing Splash
+373:16390 Night Vision Splash(2:15)
+373:16392 Weakness Splash (1:07)
+373:16393 Strength Splash (2:15)
+373:16394 Slowness Splash (1:07)
+373:16396 Harming Splash
+373:16398 Invisibility Splash (2:15)
+373:16417 Regeneration Splash II (0:16)
+373:16418 Swiftness Splash II (1:07)
+373:16420 Poison Splash II (0:16)
+373:16421 Healing Splash II
+373:16425 Strength Splash II (1:07)
+373:16428 Harming Splash II
+373:16449 Regeneration Splash (1:30)
+373:16450 Swiftness Splash (6:00)
+373:16451 Fire Resistance Splash (6:00)
+373:16452 Poison Splash (1:30)
+373:16454 Night Vision Splash (6:00)
+373:16456 Weakness Splash (3:00)
+373:16457 Strength Splash (6:00)
+373:16458 Slowness Splash (3:00)
+373:16462 Invisibility Splash (6:00)
+373:16481 Regeneration Splash II (0:45)
+373:16482 Swiftness Splash II (3:00)
+373:16484 Poison Splash II (0:45)
+373:16489 Strength Splash II (3:00)
+*/
 }

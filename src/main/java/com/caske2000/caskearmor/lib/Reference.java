@@ -6,7 +6,7 @@ public final class Reference
 {
     public static final String MODID = "caskearmor";
     public static final String NAME = "Caske Armor";
-    public static final String ID = "1.7.10-0.1.1";
+    public static final String ID = "1.7.10-0.1.2";
     public static final String DEPENDENCIES = "required-after:CoFHCore@[" + CoFHCore.version + ",);after:ThermalExpansion";
 
     public static final String COMMON_PROXY = "com.caske2000.caskearmor.proxy.CommonProxy";

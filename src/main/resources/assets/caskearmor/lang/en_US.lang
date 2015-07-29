@@ -22,6 +22,8 @@ item.resonantBoots.name=§1Resonant Boots§r
 item.energyCore.name=Energy Core (Crafting Item)
 item.armorUpgrade.SPEED.name=Armor Upgrade (Speed)
 item.armorUpgrade.NIGHT_VISION.name=Armor Upgrade (Night Vision)
+item.armorUpgrade.AUTO_FEEDER.name=Armor Upgrade (Auto Feeder)
+
 
 # Creative Tab
 itemGroup.caskearmor=Caske Armor
@@ -34,6 +36,7 @@ info.caske.moreInfo=for more info
 info.caske.energy=Energy Stored
 info.caske.shift=Shift
 info.caske.your=Your
+info.caske.upgrade=§6Apply this upgrade to your armor to give it that extra boost!
 
 # Keys
 keys.caskearmor.category=Caske Armor
