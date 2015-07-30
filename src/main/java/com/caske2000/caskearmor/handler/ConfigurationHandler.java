@@ -28,7 +28,7 @@ public class ConfigurationHandler
     private static void loadConfigs()
     {
         enableHUD = config.getBoolean("enableHUD", CATEGORY_CASKE, true, "Do you want to enable the ingame HUD?");
-        extendedHUD = config.getBoolean("extendedHUD", CATEGORY_CASKE, true, "Do you want to show an extended HUD?");
+        extendedHUD = config.getBoolean("extendedHUD", CATEGORY_CASKE, false, "Do you want to show an extended HUD?");
         HUDLayout = config.getInt("HUDLayout", CATEGORY_CASKE, 1, 1, 2, "1 = Horizontal, 2 = Vertical");
         HUDPosition = config.getInt("HUDPosition", CATEGORY_CASKE, 1, 1, 3, "1 = Top, 2 = Center, 3 = Bottom");
         if (config.hasChanged())

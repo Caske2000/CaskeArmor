@@ -2,6 +2,7 @@ package com.caske2000.caskearmor;
 
 import com.caske2000.caskearmor.handler.ConfigurationHandler;
 import com.caske2000.caskearmor.handler.KeyInputEventHandler;
+import com.caske2000.caskearmor.handler.ModEventHandler;
 import com.caske2000.caskearmor.lib.Reference;
 import com.caske2000.caskearmor.proxy.CommonProxy;
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -10,6 +11,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.common.MinecraftForge;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.ID, dependencies = Reference.DEPENDENCIES, guiFactory = Reference.GUI_FACTORY)
 public class CaskeArmor
@@ -26,6 +28,7 @@ public class CaskeArmor
     {
         ConfigurationHandler.init(e.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+        MinecraftForge.EVENT_BUS.register(new ModEventHandler());
         proxy.registerKeyBindings();
         proxy.preInit(e);
     }

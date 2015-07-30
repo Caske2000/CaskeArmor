@@ -18,7 +18,7 @@ public class ArmorUpgrade extends ShapelessOreRecipe
 {
     private final IEnergyContainerItem resultItem;
     private final int itemMeta;
-    public static final String[] upgradeTypes = new String[]{"SPEED", "NIGHT_VISION", "AUTO_FEEDER"};
+    public static final String[] upgradeTypes = new String[]{"SPEED", "NIGHT_VISION", "AUTO_FEEDER", "EFFICIENCY", "FLIGHT"};
 
     private List<String> unappliedUpgrades = new ArrayList<String>();
 

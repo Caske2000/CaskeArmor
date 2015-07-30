@@ -22,6 +22,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
@@ -55,51 +56,80 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
     @Override
     public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack)
     {
-        //TODO check if plenty of energy
         int energyConsumed = 0;
+        boolean isEfficient = false;
         ItemRFArmor armor;
         if (itemStack.getItem() instanceof ItemRFArmor)
         {
             armor = (ItemRFArmor) itemStack.getItem();
-            switch (armor.armorType)
+            if (itemStack.stackTagCompound.getInteger("ENERGY") > 1000)          // Added to help the player if creepy situations
             {
-                case 0:
-                    if (itemStack.stackTagCompound.hasKey("NIGHT_VISION"))
-                    {
-                        if (itemStack.stackTagCompound.getBoolean("NIGHT_VISION"))
+                NBTTagCompound tagCompound = itemStack.stackTagCompound;
+                switch (armor.armorType)
+                {
+                    case 0:
+                        if (tagCompound.hasKey("NIGHT_VISION"))
                         {
-                            player.addPotionEffect(new PotionEffect(Potion.nightVision.id, 1, 0));
+                            if (tagCompound.getBoolean("NIGHT_VISION"))
+                            {
+                                player.addPotionEffect(new PotionEffect(Potion.nightVision.id, 1, 0));
+                                energyConsumed += defaultEnergy;
+                            }
+                        }
+                        if (tagCompound.hasKey("AUTO_FEEDER"))
+                        {
+                            if (tagCompound.getBoolean("AUTO_FEEDER"))
+                            {
+                                player.addPotionEffect(new PotionEffect(Potion.field_76443_y.id, 1, 0));
+                                energyConsumed += defaultEnergy;
+                            }
+                        }
+                        if (tagCompound.hasKey("EFFICIENCY"))
+                        {
+                            isEfficient = tagCompound.getBoolean("EFFICIENCY");
                             energyConsumed += defaultEnergy;
                         }
-                    }
-                    if (itemStack.stackTagCompound.hasKey("AUTO_FEEDER"))
-                    {
-                        if (itemStack.stackTagCompound.getBoolean("AUTO_FEEDER"))
+                        break;
+
+                    case 1:
+                        if (tagCompound.hasKey("EFFICIENCY"))
                         {
-                            player.addPotionEffect(new PotionEffect(Potion.field_76443_y.id, 1, 0));
+                            isEfficient = tagCompound.getBoolean("EFFICIENCY");
                             energyConsumed += defaultEnergy;
                         }
-                    }
-                    break;
+                        break;
 
-                case 1:
-                    break;
-
-                case 2:
-                    if (itemStack.stackTagCompound.hasKey("SPEED"))
-                    {
-                        if (itemStack.stackTagCompound.getBoolean("SPEED"))
+                    case 2:
+                        if (tagCompound.hasKey("SPEED"))
                         {
-                            player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 1, 0));
+                            if (tagCompound.getBoolean("SPEED"))
+                            {
+                                player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 1, 0));
+                                energyConsumed += defaultEnergy;
+                            }
+                        }
+                        if (tagCompound.hasKey("EFFICIENCY"))
+                        {
+                            isEfficient = tagCompound.getBoolean("EFFICIENCY");
                             energyConsumed += defaultEnergy;
                         }
-                    }
-                    break;
+                        break;
 
-                case 3:
-                    break;
+                    case 3:
+                        if (tagCompound.hasKey("EFFICIENCY"))
+                        {
+                            isEfficient = tagCompound.getBoolean("EFFICIENCY");
+                            energyConsumed += defaultEnergy;
+                        }
+                        break;
+                }
+
+                if (isEfficient)
+                {
+                    energyConsumed -= energyConsumed / 10.0F;
+                }
+                extractEnergy(itemStack, energyConsumed, false);
             }
-            extractEnergy(itemStack, energyConsumed, false);
         }
     }
 
@@ -152,23 +182,23 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
     //endregion
 
     @Override
-     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean check)
-{
-    if (stack.getTagCompound() == null)
-        NBTHelper.setInteger(stack, "ENERGY", 0);
-
-    if (stack.getTagCompound().getInteger("MAX_ENERGY") == 0)
-        NBTHelper.setInteger(stack, "MAX_ENERGY", maxEnergy);
-
-    if (StringHelper.isShiftKeyDown())
+    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean check)
     {
-        list.add(CStringHelper.localize("info.caske.energy") + ": " + stack.stackTagCompound.getInteger("ENERGY") + " / " + maxEnergy + " RF");
-        list.add(CStringHelper.localize("info.caske.io") + ": " + maxTransfer + " RF/t");
-    } else
-    {
-        list.add(CStringHelper.shiftForInfo());
+        if (stack.getTagCompound() == null)
+            NBTHelper.setInteger(stack, "ENERGY", 0);
+
+        if (stack.getTagCompound().getInteger("MAX_ENERGY") == 0)
+            NBTHelper.setInteger(stack, "MAX_ENERGY", maxEnergy);
+
+        if (StringHelper.isShiftKeyDown())
+        {
+            list.add(CStringHelper.localize("info.caske.energy") + ": " + stack.stackTagCompound.getInteger("ENERGY") + " / " + maxEnergy + " RF");
+            list.add(CStringHelper.localize("info.caske.io") + ": " + maxTransfer + " RF/t");
+        } else
+        {
+            list.add(CStringHelper.shiftForInfo());
+        }
     }
-}
 
     //region Energystuff
     // Copied from the RedstoneArsenal repository

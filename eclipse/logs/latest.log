@@ -1,31 +1,33 @@
-[20:53:00] [main/INFO]: Setting user: Player757
-[20:53:02] [Client thread/INFO]: LWJGL Version: 2.9.1
-[20:53:07] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Caske Armor, FMLFileResourcePack:CoFH Core, FMLFileResourcePack:Thermal Dynamics, FMLFileResourcePack:Thermal Expansion, FMLFileResourcePack:Thermal Foundation
-[20:53:09] [Sound Library Loader/INFO]: Sound engine started
-[20:53:10] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
-[20:53:10] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[20:53:11] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Caske Armor, FMLFileResourcePack:CoFH Core, FMLFileResourcePack:Thermal Dynamics, FMLFileResourcePack:Thermal Expansion, FMLFileResourcePack:Thermal Foundation
-[20:53:12] [Client thread/INFO]: Created: 512x512 textures/blocks-atlas
-[20:53:12] [Client thread/INFO]: Created: 1024x512 textures/items-atlas
-[20:53:13] [Sound Library Loader/INFO]: Sound engine started
-[20:53:14] [Client thread/ERROR]: ########## GL ERROR ##########
-[20:53:14] [Client thread/ERROR]: @ Post startup
-[20:53:14] [Client thread/ERROR]: 1286: Invalid framebuffer operation
-[20:53:17] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[20:53:17] [Server thread/INFO]: Generating keypair
-[20:53:17] [Server thread/INFO]: Preparing start region for level 0
-[20:53:18] [Server thread/INFO]: Player757[local:E:3db1d912] logged in with entity id 294 at (125.61073256586104, 70.0, 262.61132499741734)
-[20:53:18] [Server thread/INFO]: Player757 joined the game
-[20:53:22] [Server thread/INFO]: Player757 has just earned the achievement [Taking Inventory]
-[20:53:22] [Client thread/INFO]: [CHAT] Player757 has just earned the achievement [Taking Inventory]
-[20:53:31] [Server thread/INFO]: Saving and pausing game...
-[20:53:31] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[20:53:32] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[20:53:32] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[20:53:32] [Server thread/INFO]: Stopping server
-[20:53:32] [Server thread/INFO]: Saving players
-[20:53:32] [Server thread/INFO]: Saving worlds
-[20:53:32] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[20:53:32] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[20:53:32] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[20:53:33] [Client thread/INFO]: Stopping!
+[21:07:18] [main/INFO]: Setting user: Player532
+[21:07:20] [Client thread/INFO]: LWJGL Version: 2.9.1
+[21:07:25] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Caske Armor, FMLFileResourcePack:CoFH Core, FMLFileResourcePack:Thermal Dynamics, FMLFileResourcePack:Thermal Expansion, FMLFileResourcePack:Thermal Foundation
+[21:07:27] [Sound Library Loader/INFO]: Sound engine started
+[21:07:28] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[21:07:28] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[21:07:29] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Caske Armor, FMLFileResourcePack:CoFH Core, FMLFileResourcePack:Thermal Dynamics, FMLFileResourcePack:Thermal Expansion, FMLFileResourcePack:Thermal Foundation
+[21:07:30] [Client thread/INFO]: Created: 512x512 textures/blocks-atlas
+[21:07:30] [Client thread/INFO]: Created: 1024x512 textures/items-atlas
+[21:07:31] [Sound Library Loader/INFO]: Sound engine started
+[21:07:32] [Client thread/ERROR]: ########## GL ERROR ##########
+[21:07:32] [Client thread/ERROR]: @ Post startup
+[21:07:32] [Client thread/ERROR]: 1286: Invalid framebuffer operation
+[21:07:34] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[21:07:34] [Server thread/INFO]: Generating keypair
+[21:07:34] [Server thread/INFO]: Preparing start region for level 0
+[21:07:35] [Server thread/INFO]: Player532[local:E:df6d9ce9] logged in with entity id 231 at (-90.8017512616593, 69.0, 255.70528547299116)
+[21:07:35] [Server thread/INFO]: Player532 joined the game
+[21:07:40] [Server thread/INFO]: Player532 has just earned the achievement [Taking Inventory]
+[21:07:41] [Client thread/INFO]: [CHAT] Player532 has just earned the achievement [Taking Inventory]
+[21:07:48] [Server thread/INFO]: [Player532: Given [§9Leadstone Helmet§r] * 1 to Player532]
+[21:07:48] [Client thread/INFO]: [CHAT] Given [§9Leadstone Helmet§r] * 1 to Player532
+[21:08:56] [Server thread/INFO]: Saving and pausing game...
+[21:08:56] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[21:08:56] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[21:08:56] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[21:08:56] [Server thread/INFO]: Stopping server
+[21:08:56] [Server thread/INFO]: Saving players
+[21:08:56] [Server thread/INFO]: Saving worlds
+[21:08:56] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[21:08:56] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[21:08:56] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[21:08:57] [Client thread/INFO]: Stopping!
