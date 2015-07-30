@@ -9,7 +9,7 @@ import java.io.File;
 
 public class ConfigurationHandler
 {
-    public static final String CATEGORY_CASKE = "caske";
+    private static final String CATEGORY_CASKE = "caske";
     public static Configuration config;
     public static boolean enableHUD;
     public static boolean extendedHUD;

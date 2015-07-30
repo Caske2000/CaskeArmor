@@ -6,7 +6,6 @@ import com.caske2000.caskearmor.creativetab.CreativeTab;
 import com.caske2000.caskearmor.lib.Reference;
 import com.caske2000.caskearmor.util.CStringHelper;
 import com.caske2000.caskearmor.util.LogHelper;
-import com.caske2000.caskearmor.util.NBTHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -48,9 +47,10 @@ public class ItemArmorUpgrade extends Item
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void getSubItems(Item item, CreativeTabs tab, List list) {
+    public void getSubItems(Item item, CreativeTabs tab, List list)
+    {
         for (int i = 0; i < metaItems; i++)
-                list.add(new ItemStack(item, 1, i));
+            list.add(new ItemStack(item, 1, i));
     }
 
     @Override
@@ -87,8 +87,7 @@ public class ItemArmorUpgrade extends Item
         {
             LogHelper.warn("METAITEMS: " + metaItems);
             throw new NumberFormatException("Integer is out of range: " + itemStack.getItemDamage());
-        }
-        else
+        } else
             return ArmorUpgrade.upgradeTypes[itemStack.getItemDamage()];
     }
 }

@@ -16,10 +16,9 @@ import java.util.List;
 
 public class ArmorUpgrade extends ShapelessOreRecipe
 {
+    public static final String[] upgradeTypes = new String[]{"SPEED", "NIGHT_VISION", "AUTO_FEEDER", "EFFICIENCY", "FLIGHT"};
     private final IEnergyContainerItem resultItem;
     private final int itemMeta;
-    public static final String[] upgradeTypes = new String[]{"SPEED", "NIGHT_VISION", "AUTO_FEEDER", "EFFICIENCY", "FLIGHT"};
-
     private List<String> unappliedUpgrades = new ArrayList<String>();
 
     public ArmorUpgrade(ItemStack result, Object... recipe)
@@ -36,7 +35,7 @@ public class ArmorUpgrade extends ShapelessOreRecipe
 
         ItemStack stackInSlot;
         NBTTagCompound tagCompound = null;
-        ItemArmorUpgrade armorUpgrade = null;
+        ItemArmorUpgrade armorUpgrade;
         for (int i = 0; i < var1.getSizeInventory(); i++)
         {
             stackInSlot = var1.getStackInSlot(i);

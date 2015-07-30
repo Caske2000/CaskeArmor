@@ -4,7 +4,6 @@ import com.caske2000.caskearmor.item.ModItems;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import net.minecraft.client.model.ModelBiped;
 
 public class CommonProxy
 {
@@ -25,12 +24,6 @@ public class CommonProxy
     }
 
     public void registerKeyBindings()
-    {
-    } // NO-OP
-
-    public ModelBiped getArmorModel(int id)
-    {
-        return null;
+    {  // NO-OP
     }
-
 }

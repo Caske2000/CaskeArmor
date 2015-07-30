@@ -19,7 +19,7 @@ public class HUDHandler extends Gui
     private static final ResourceLocation POWERBAR_H = new ResourceLocation("caskearmor", "textures/hud/energy_H.png");
     private static final Minecraft mc = Minecraft.getMinecraft();
 
-    public static void renderHUD()
+    private static void renderHUD()
     {
         if ((mc.inGameHasFocus || (mc.currentScreen != null && (mc.currentScreen instanceof GuiChat))) && !mc.gameSettings.showDebugInfo)
         {
@@ -50,7 +50,7 @@ public class HUDHandler extends Gui
         }
     }
 
-    public static void drawToHUD(String str, int yPos)
+    private static void drawToHUD(String str, int yPos)
     {
         ScaledResolution res = new ScaledResolution(mc, mc.displayWidth, mc.displayHeight);
         int yOffset = 0;

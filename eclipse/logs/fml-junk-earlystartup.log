@@ -1816,3 +1816,105 @@
 [21:07:14] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
 [21:07:14] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
 [21:07:14] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[21:38:39] [main/INFO] [GradleStart]: Extra: []
+[21:38:39] [main/INFO] [GradleStart]: Found and added coremod: cofh.asm.LoadingPlugin
+[21:38:39] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[21:38:39] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[21:38:39] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Caske2000/.gradle/caches/minecraft/assets, --assetIndex, 1.7.10, --accessToken, {REDACTED}, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[21:38:39] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[21:38:39] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[21:38:39] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[21:38:39] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[21:43:26] [main/INFO] [GradleStart]: Extra: []
+[21:43:26] [main/INFO] [GradleStart]: Found and added coremod: cofh.asm.LoadingPlugin
+[21:43:26] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[21:43:26] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[21:43:26] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Caske2000/.gradle/caches/minecraft/assets, --assetIndex, 1.7.10, --accessToken, {REDACTED}, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[21:43:26] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[21:43:27] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[21:43:27] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[21:43:27] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[21:46:42] [main/INFO] [GradleStart]: version: 1.7
+[21:46:42] [main/INFO] [GradleStart]: username: Caske2000
+[21:46:42] [main/INFO] [GradleStart]: Extra: [--tweakClass, cpw.mods.fml.common.launcher.FMLTweaker]
+[21:46:42] [main/INFO] [GradleStart]: Found and added coremod: cofh.asm.LoadingPlugin
+[21:46:42] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[21:46:42] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[21:46:42] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Caske2000/.gradle/caches/minecraft/assets, --assetIndex, 1.7.10, --accessToken, {REDACTED}, --version, 1.7, --username, Caske2000, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[21:46:42] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[21:46:42] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[21:46:42] [main/WARN] [LaunchWrapper]: Tweak class name cpw.mods.fml.common.launcher.FMLTweaker has already been visited -- skipping
+[21:46:42] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[21:46:42] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[21:48:26] [main/INFO] [GradleStart]: version: 1.7
+[21:48:26] [main/INFO] [GradleStart]: username: Caske2000
+[21:48:26] [main/INFO] [GradleStart]: Extra: [--tweakClass, cpw.mods.fml.common.launcher.FMLTweaker]
+[21:48:26] [main/INFO] [GradleStart]: Found and added coremod: cofh.asm.LoadingPlugin
+[21:48:26] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[21:48:26] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[21:48:26] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Caske2000/.gradle/caches/minecraft/assets, --assetIndex, 1.7.10, --accessToken, {REDACTED}, --version, 1.7, --username, Caske2000, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[21:48:26] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[21:48:26] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[21:48:26] [main/WARN] [LaunchWrapper]: Tweak class name cpw.mods.fml.common.launcher.FMLTweaker has already been visited -- skipping
+[21:48:26] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[21:48:26] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[21:49:09] [main/INFO] [GradleStart]: version: 1.7
+[21:49:09] [main/INFO] [GradleStart]: username: Caske2000
+[21:49:09] [main/INFO] [GradleStart]: Extra: [--tweakClass, cpw.mods.fml.common.launcher.FMLTweaker]
+[21:49:09] [main/INFO] [GradleStart]: Found and added coremod: cofh.asm.LoadingPlugin
+[21:49:09] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[21:49:09] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[21:49:09] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Caske2000/.gradle/caches/minecraft/assets, --assetIndex, 1.7.10, --accessToken, {REDACTED}, --version, 1.7, --username, Caske2000, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[21:49:10] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[21:49:10] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[21:49:10] [main/WARN] [LaunchWrapper]: Tweak class name cpw.mods.fml.common.launcher.FMLTweaker has already been visited -- skipping
+[21:49:10] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[21:49:10] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[21:50:32] [main/INFO] [GradleStart]: version: 1.7
+[21:50:32] [main/INFO] [GradleStart]: username: Caske2000
+[21:50:32] [main/INFO] [GradleStart]: Extra: [--tweakClass, cpw.mods.fml.common.launcher.FMLTweaker]
+[21:50:32] [main/INFO] [GradleStart]: Found and added coremod: cofh.asm.LoadingPlugin
+[21:50:32] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[21:50:32] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[21:50:32] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Caske2000/.gradle/caches/minecraft/assets, --assetIndex, 1.7.10, --accessToken, {REDACTED}, --version, 1.7, --username, Caske2000, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[21:50:32] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[21:50:32] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[21:50:32] [main/WARN] [LaunchWrapper]: Tweak class name cpw.mods.fml.common.launcher.FMLTweaker has already been visited -- skipping
+[21:50:32] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[21:50:32] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[21:54:26] [main/INFO] [GradleStart]: version: 1.7
+[21:54:26] [main/INFO] [GradleStart]: username: Caske2000
+[21:54:26] [main/INFO] [GradleStart]: Extra: [--tweakClass, cpw.mods.fml.common.launcher.FMLTweaker]
+[21:54:26] [main/INFO] [GradleStart]: Found and added coremod: cofh.asm.LoadingPlugin
+[21:54:26] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[21:54:26] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[21:54:26] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Caske2000/.gradle/caches/minecraft/assets, --assetIndex, 1.7.10, --accessToken, {REDACTED}, --version, 1.7, --username, Caske2000, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[21:54:26] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[21:54:26] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[21:54:26] [main/WARN] [LaunchWrapper]: Tweak class name cpw.mods.fml.common.launcher.FMLTweaker has already been visited -- skipping
+[21:54:26] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[21:54:26] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[22:00:18] [main/INFO] [GradleStart]: version: 1.7
+[22:00:18] [main/INFO] [GradleStart]: username: Caske2000
+[22:00:18] [main/INFO] [GradleStart]: Extra: [--tweakClass, cpw.mods.fml.common.launcher.FMLTweaker]
+[22:00:18] [main/INFO] [GradleStart]: Found and added coremod: cofh.asm.LoadingPlugin
+[22:00:18] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[22:00:18] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[22:00:18] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Caske2000/.gradle/caches/minecraft/assets, --assetIndex, 1.7.10, --accessToken, {REDACTED}, --version, 1.7, --username, Caske2000, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[22:00:18] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[22:00:18] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[22:00:18] [main/WARN] [LaunchWrapper]: Tweak class name cpw.mods.fml.common.launcher.FMLTweaker has already been visited -- skipping
+[22:00:18] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[22:00:18] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[22:02:21] [main/INFO] [GradleStart]: version: 1.7
+[22:02:21] [main/INFO] [GradleStart]: username: Caske2000
+[22:02:21] [main/INFO] [GradleStart]: Extra: [--tweakClass, cpw.mods.fml.common.launcher.FMLTweaker]
+[22:02:21] [main/INFO] [GradleStart]: Found and added coremod: cofh.asm.LoadingPlugin
+[22:02:21] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[22:02:21] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[22:02:21] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Caske2000/.gradle/caches/minecraft/assets, --assetIndex, 1.7.10, --accessToken, {REDACTED}, --version, 1.7, --username, Caske2000, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[22:02:21] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[22:02:21] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[22:02:21] [main/WARN] [LaunchWrapper]: Tweak class name cpw.mods.fml.common.launcher.FMLTweaker has already been visited -- skipping
+[22:02:21] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[22:02:21] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker

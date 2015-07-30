@@ -111,74 +111,74 @@ public class ModItems
 
     public static void postInit()
     {
-        GameRegistry.addRecipe(new ShapedOreRecipe(energyCore, new Object[]{"IVI", "XLX", "IVI", 'I', Blocks.redstone_block, 'V', Items.gold_ingot, 'X', TEItems.powerCoilElectrum, 'L', TEItems.capacitorBasic}));
-        GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(armorUpgrade, 1, 0)), new Object[]{"IXI", "XVX", "IXI", 'I', new ItemStack(Items.dye, 1, 4), 'V', new ItemStack(Items.potionitem, 1, 8226), 'X', Items.gold_ingot}));
-        GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(armorUpgrade, 1, 1)), new Object[]{"IXI", "XVX", "IXI", 'I', new ItemStack(Items.dye, 1, 4), 'V', new ItemStack(Items.potionitem, 1, 8198), 'X', Items.gold_ingot}));
-        GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(armorUpgrade, 1, 2)), new Object[]{"IXI", "XVX", "IXI", 'I', new ItemStack(Items.dye, 1, 4), 'V', Items.golden_apple, 'X', Items.gold_ingot}));
+        GameRegistry.addRecipe(new ShapedOreRecipe(energyCore, "IVI", "XLX", "IVI", 'I', Blocks.redstone_block, 'V', Items.gold_ingot, 'X', TEItems.powerCoilElectrum, 'L', TEItems.capacitorBasic));
+        GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(armorUpgrade, 1, 0)), "IXI", "XVX", "IXI", 'I', new ItemStack(Items.dye, 1, 4), 'V', new ItemStack(Items.potionitem, 1, 8226), 'X', Items.gold_ingot));
+        GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(armorUpgrade, 1, 1)), "IXI", "XVX", "IXI", 'I', new ItemStack(Items.dye, 1, 4), 'V', new ItemStack(Items.potionitem, 1, 8198), 'X', Items.gold_ingot));
+        GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(armorUpgrade, 1, 2)), "IXI", "XVX", "IXI", 'I', new ItemStack(Items.dye, 1, 4), 'V', Items.golden_apple, 'X', Items.gold_ingot));
 
         //region Armor Recipes
-        GameRegistry.addRecipe(new ShapedOreRecipe(leadstoneHelmet, new Object[]{"IVI", "I I", 'I', "ingotLead", 'V', energyCore}));
-        GameRegistry.addRecipe(new ShapedOreRecipe(leadstoneChest, new Object[]{"I I", "IVI", "III", 'I', "ingotLead", 'V', energyCore}));
-        GameRegistry.addRecipe(new ShapedOreRecipe(leadstoneLegs, new Object[]{"IVI", "I I", "I I", 'I', "ingotLead", 'V', energyCore}));
-        GameRegistry.addRecipe(new ShapedOreRecipe(leadstoneBoots, new Object[]{"   ", "IVI", "I I", 'I', "ingotLead", 'V', energyCore}));
+        GameRegistry.addRecipe(new ShapedOreRecipe(leadstoneHelmet, "IVI", "I I", 'I', "ingotLead", 'V', energyCore));
+        GameRegistry.addRecipe(new ShapedOreRecipe(leadstoneChest, "I I", "IVI", "III", 'I', "ingotLead", 'V', energyCore));
+        GameRegistry.addRecipe(new ShapedOreRecipe(leadstoneLegs, "IVI", "I I", "I I", 'I', "ingotLead", 'V', energyCore));
+        GameRegistry.addRecipe(new ShapedOreRecipe(leadstoneBoots, "   ", "IVI", "I I", 'I', "ingotLead", 'V', energyCore));
 
-        GameRegistry.addRecipe(new ShapedOreRecipe(hardenedHelmet, new Object[]{"IVI", "I I", 'I', "ingotInvar", 'V', energyCore}));
-        GameRegistry.addRecipe(new ShapedOreRecipe(hardenedChest, new Object[]{"I I", "IVI", "III", 'I', "ingotInvar", 'V', energyCore}));
-        GameRegistry.addRecipe(new ShapedOreRecipe(hardenedLegs, new Object[]{"IVI", "I I", "I I", 'I', "ingotInvar", 'V', energyCore}));
-        GameRegistry.addRecipe(new ShapedOreRecipe(hardenedBoots, new Object[]{"   ", "IVI", "I I", 'I', "ingotInvar", 'V', energyCore}));
+        GameRegistry.addRecipe(new ShapedOreRecipe(hardenedHelmet, "IVI", "I I", 'I', "ingotInvar", 'V', energyCore));
+        GameRegistry.addRecipe(new ShapedOreRecipe(hardenedChest, "I I", "IVI", "III", 'I', "ingotInvar", 'V', energyCore));
+        GameRegistry.addRecipe(new ShapedOreRecipe(hardenedLegs, "IVI", "I I", "I I", 'I', "ingotInvar", 'V', energyCore));
+        GameRegistry.addRecipe(new ShapedOreRecipe(hardenedBoots, "   ", "IVI", "I I", 'I', "ingotInvar", 'V', energyCore));
 
-        GameRegistry.addRecipe(new ShapedOreRecipe(redstoneHelmet, new Object[]{"IVI", "I I", 'I', "ingotElectrum", 'V', energyCore}));
-        GameRegistry.addRecipe(new ShapedOreRecipe(redstoneChest, new Object[]{"I I", "IVI", "III", 'I', "ingotElectrum", 'V', energyCore}));
-        GameRegistry.addRecipe(new ShapedOreRecipe(redstoneLegs, new Object[]{"IVI", "I I", "I I", 'I', "ingotElectrum", 'V', energyCore}));
-        GameRegistry.addRecipe(new ShapedOreRecipe(redstoneBoots, new Object[]{"   ", "IVI", "I I", 'I', "ingotElectrum", 'V', energyCore}));
+        GameRegistry.addRecipe(new ShapedOreRecipe(redstoneHelmet, "IVI", "I I", 'I', "ingotElectrum", 'V', energyCore));
+        GameRegistry.addRecipe(new ShapedOreRecipe(redstoneChest, "I I", "IVI", "III", 'I', "ingotElectrum", 'V', energyCore));
+        GameRegistry.addRecipe(new ShapedOreRecipe(redstoneLegs, "IVI", "I I", "I I", 'I', "ingotElectrum", 'V', energyCore));
+        GameRegistry.addRecipe(new ShapedOreRecipe(redstoneBoots, "   ", "IVI", "I I", 'I', "ingotElectrum", 'V', energyCore));
 
-        GameRegistry.addRecipe(new ShapedOreRecipe(resonantHelmet, new Object[]{"IVI", "I I", 'I', "ingotEnderium", 'V', energyCore}));
-        GameRegistry.addRecipe(new ShapedOreRecipe(resonantChest, new Object[]{"I I", "IVI", "III", 'I', "ingotEnderium", 'V', energyCore}));
-        GameRegistry.addRecipe(new ShapedOreRecipe(resonantLegs, new Object[]{"IVI", "I I", "I I", 'I', "ingotEnderium", 'V', energyCore}));
-        GameRegistry.addRecipe(new ShapedOreRecipe(resonantBoots, new Object[]{"   ", "IVI", "I I", 'I', "ingotEnderium", 'V', energyCore}));
+        GameRegistry.addRecipe(new ShapedOreRecipe(resonantHelmet, "IVI", "I I", 'I', "ingotEnderium", 'V', energyCore));
+        GameRegistry.addRecipe(new ShapedOreRecipe(resonantChest, "I I", "IVI", "III", 'I', "ingotEnderium", 'V', energyCore));
+        GameRegistry.addRecipe(new ShapedOreRecipe(resonantLegs, "IVI", "I I", "I I", 'I', "ingotEnderium", 'V', energyCore));
+        GameRegistry.addRecipe(new ShapedOreRecipe(resonantBoots, "   ", "IVI", "I I", 'I', "ingotEnderium", 'V', energyCore));
         //endregion Recipes
 
         // SPEED
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(leadstoneLegs, 1), new Object[]{leadstoneLegs, new ItemStack(armorUpgrade, 1, 0)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(hardenedLegs, 1), new Object[]{hardenedLegs, new ItemStack(armorUpgrade, 1, 0)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(redstoneLegs, 1), new Object[]{redstoneLegs, new ItemStack(armorUpgrade, 1, 0)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(resonantLegs, 1), new Object[]{resonantLegs, new ItemStack(armorUpgrade, 1, 0)}));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(leadstoneLegs, 1), leadstoneLegs, new ItemStack(armorUpgrade, 1, 0)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(hardenedLegs, 1), hardenedLegs, new ItemStack(armorUpgrade, 1, 0)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(redstoneLegs, 1), redstoneLegs, new ItemStack(armorUpgrade, 1, 0)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(resonantLegs, 1), resonantLegs, new ItemStack(armorUpgrade, 1, 0)));
 
         // NIGHT VISION
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(leadstoneHelmet, 1), new Object[]{leadstoneHelmet, new ItemStack(armorUpgrade, 1, 1)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(hardenedHelmet, 1), new Object[]{hardenedHelmet, new ItemStack(armorUpgrade, 1, 1)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(redstoneHelmet, 1), new Object[]{redstoneHelmet, new ItemStack(armorUpgrade, 1, 1)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(resonantHelmet, 1), new Object[]{resonantHelmet, new ItemStack(armorUpgrade, 1, 1)}));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(leadstoneHelmet, 1), leadstoneHelmet, new ItemStack(armorUpgrade, 1, 1)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(hardenedHelmet, 1), hardenedHelmet, new ItemStack(armorUpgrade, 1, 1)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(redstoneHelmet, 1), redstoneHelmet, new ItemStack(armorUpgrade, 1, 1)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(resonantHelmet, 1), resonantHelmet, new ItemStack(armorUpgrade, 1, 1)));
 
         // AUTO FEEDER
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(leadstoneHelmet, 1), new Object[]{leadstoneHelmet, new ItemStack(armorUpgrade, 1, 2)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(hardenedHelmet, 1), new Object[]{hardenedHelmet, new ItemStack(armorUpgrade, 1, 2)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(redstoneHelmet, 1), new Object[]{redstoneHelmet, new ItemStack(armorUpgrade, 1, 2)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(resonantHelmet, 1), new Object[]{resonantHelmet, new ItemStack(armorUpgrade, 1, 2)}));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(leadstoneHelmet, 1), leadstoneHelmet, new ItemStack(armorUpgrade, 1, 2)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(hardenedHelmet, 1), hardenedHelmet, new ItemStack(armorUpgrade, 1, 2)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(redstoneHelmet, 1), redstoneHelmet, new ItemStack(armorUpgrade, 1, 2)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(resonantHelmet, 1), resonantHelmet, new ItemStack(armorUpgrade, 1, 2)));
 
         // EFFICIENCY
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(leadstoneHelmet, 1), new Object[]{leadstoneHelmet, new ItemStack(armorUpgrade, 1, 3)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(hardenedHelmet, 1), new Object[]{hardenedHelmet, new ItemStack(armorUpgrade, 1, 3)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(redstoneHelmet, 1), new Object[]{redstoneHelmet, new ItemStack(armorUpgrade, 1, 3)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(resonantHelmet, 1), new Object[]{resonantHelmet, new ItemStack(armorUpgrade, 1, 3)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(leadstoneChest, 1), new Object[]{leadstoneChest, new ItemStack(armorUpgrade, 1, 3)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(hardenedChest, 1), new Object[]{hardenedChest, new ItemStack(armorUpgrade, 1, 3)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(redstoneChest, 1), new Object[]{redstoneChest, new ItemStack(armorUpgrade, 1, 3)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(resonantChest, 1), new Object[]{resonantChest, new ItemStack(armorUpgrade, 1, 3)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(leadstoneLegs, 1), new Object[]{leadstoneLegs, new ItemStack(armorUpgrade, 1, 3)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(hardenedLegs, 1), new Object[]{hardenedLegs, new ItemStack(armorUpgrade, 1, 3)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(redstoneLegs, 1), new Object[]{redstoneLegs, new ItemStack(armorUpgrade, 1, 3)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(resonantLegs, 1), new Object[]{resonantLegs, new ItemStack(armorUpgrade, 1, 3)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(leadstoneLegs, 1), new Object[]{leadstoneLegs, new ItemStack(armorUpgrade, 1, 3)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(hardenedLegs, 1), new Object[]{hardenedLegs, new ItemStack(armorUpgrade, 1, 3)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(redstoneLegs, 1), new Object[]{redstoneLegs, new ItemStack(armorUpgrade, 1, 3)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(resonantLegs, 1), new Object[]{resonantLegs, new ItemStack(armorUpgrade, 1, 3)}));
-        
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(leadstoneHelmet, 1), leadstoneHelmet, new ItemStack(armorUpgrade, 1, 3)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(hardenedHelmet, 1), hardenedHelmet, new ItemStack(armorUpgrade, 1, 3)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(redstoneHelmet, 1), redstoneHelmet, new ItemStack(armorUpgrade, 1, 3)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(resonantHelmet, 1), resonantHelmet, new ItemStack(armorUpgrade, 1, 3)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(leadstoneChest, 1), leadstoneChest, new ItemStack(armorUpgrade, 1, 3)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(hardenedChest, 1), hardenedChest, new ItemStack(armorUpgrade, 1, 3)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(redstoneChest, 1), redstoneChest, new ItemStack(armorUpgrade, 1, 3)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(resonantChest, 1), resonantChest, new ItemStack(armorUpgrade, 1, 3)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(leadstoneLegs, 1), leadstoneLegs, new ItemStack(armorUpgrade, 1, 3)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(hardenedLegs, 1), hardenedLegs, new ItemStack(armorUpgrade, 1, 3)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(redstoneLegs, 1), redstoneLegs, new ItemStack(armorUpgrade, 1, 3)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(resonantLegs, 1), resonantLegs, new ItemStack(armorUpgrade, 1, 3)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(leadstoneLegs, 1), leadstoneLegs, new ItemStack(armorUpgrade, 1, 3)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(hardenedLegs, 1), hardenedLegs, new ItemStack(armorUpgrade, 1, 3)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(redstoneLegs, 1), redstoneLegs, new ItemStack(armorUpgrade, 1, 3)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(resonantLegs, 1), resonantLegs, new ItemStack(armorUpgrade, 1, 3)));
+
         // FLIGHT
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(leadstoneChest, 1), new Object[]{leadstoneChest, new ItemStack(armorUpgrade, 1, 4)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(hardenedChest, 1), new Object[]{hardenedChest, new ItemStack(armorUpgrade, 1, 4)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(redstoneChest, 1), new Object[]{redstoneChest, new ItemStack(armorUpgrade, 1, 4)}));
-        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(resonantChest, 1), new Object[]{resonantChest, new ItemStack(armorUpgrade, 1, 4)}));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(leadstoneChest, 1), leadstoneChest, new ItemStack(armorUpgrade, 1, 4)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(hardenedChest, 1), hardenedChest, new ItemStack(armorUpgrade, 1, 4)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(redstoneChest, 1), redstoneChest, new ItemStack(armorUpgrade, 1, 4)));
+        GameRegistry.addRecipe(new ArmorUpgrade(new ItemStack(resonantChest, 1), resonantChest, new ItemStack(armorUpgrade, 1, 4)));
     }
 
     private static void registerItem(Item item, String name)

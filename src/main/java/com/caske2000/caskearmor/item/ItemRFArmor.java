@@ -9,6 +9,7 @@ import com.caske2000.caskearmor.creativetab.CreativeTab;
 import com.caske2000.caskearmor.handler.ConfigurationHandler;
 import com.caske2000.caskearmor.lib.Reference;
 import com.caske2000.caskearmor.util.CStringHelper;
+import com.caske2000.caskearmor.util.LogHelper;
 import com.caske2000.caskearmor.util.NBTHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -33,14 +34,14 @@ import java.util.List;
 
 public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, ISpecialArmor, IItemRFUpgradable
 {
-    ModelBiped model = null;
+    private ModelBiped model = null;
     // TODO Own the code!
     private int maxEnergy;
     private int maxTransfer;
     private ArmorMetal armorMetal;
     // TODO Add upgradeSlots
     private int upgradeSlots;
-    private int defaultEnergy = 3;      // The default energy cost of a upgrademodule in RF/t
+    int defaultEnergy = 3;
 
     public ItemRFArmor(ArmorMaterial material, int type, int maxEnergy, int maxTransfer, ArmorMetal metal, int upgradeSlots)
     {
@@ -137,12 +138,26 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
     @Override
     public String getArmorTexture(ItemStack itemstack, Entity entity, int slot, String type)
     {
-        switch (slot)
+        LogHelper.info(entity.getCommandSenderName() == "Caske2000");
+        if (entity.getCommandSenderName() == "Caske2000" || entity.getCommandSenderName() == "direwolf20" || entity.getCommandSenderName() == "Soaryn")
         {
-            case 2:
-                return Reference.MODID + ":models/armor/tester_layer_2.png"; //2 should be the slot for legs
-            default:
-                return Reference.MODID + ":models/armor/tester_layer_1.png";
+            switch (slot)
+            {
+                case 2: //2 should be the slot for legs
+                    return Reference.MODID + ":models/armor/pink_layer_2.png";
+                default:
+                    return Reference.MODID + ":models/armor/pink_layer_1.png";
+            }
+        }
+        else
+        {
+            switch (slot)
+            {
+                case 2: //2 should be the slot for legs
+                    return Reference.MODID + ":models/armor/tester_layer_2.png";
+                default:
+                    return Reference.MODID + ":models/armor/tester_layer_1.png";
+            }
         }
     }
 

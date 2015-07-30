@@ -19,7 +19,7 @@ public class KeyInputEventHandler
     }
 
     @SubscribeEvent
-    public void handleKeyInputEvent(InputEvent.KeyInputEvent e)
+    public void handleKeyInputEvent(InputEvent.KeyInputEvent event)
     {
         if (getPressedKey() == Key.OPTIONS_MENU && Minecraft.getMinecraft().theWorld.isRemote)
             Minecraft.getMinecraft().displayGuiScreen(new ModGuiConfig(Minecraft.getMinecraft().currentScreen));
