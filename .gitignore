@@ -2,26 +2,23 @@
 *.jar
 !/gradle/wrapper/gradle-wrapper.jar
 
-# gradle stuff
-build
-.gradle
+# Gradle
+/build
+/.gradle
 
-# eclipse stuff
-*.classpath
-*.project
-*.settings
-bin
+# ForgeGradle
+/run
 
-# run place
-run
+# Eclipse
+/eclipse
 
-# intellij stuff
+# IntelliJ
 .idea
 out
 *.iml
 *.imr
 *.iws
 
-# Other stuff
+# Misc.
 repo
 logs
