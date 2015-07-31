@@ -13,8 +13,8 @@
 /eclipse
 
 # IntelliJ
-.idea
-out
+/.idea
+/out
 *.iml
 *.imr
 *.iws
