@@ -19,7 +19,7 @@ public class ArmorUpgrade extends ShapelessOreRecipe
     public static final String[] upgradeTypes = new String[]{"SPEED", "NIGHT_VISION", "AUTO_FEEDER", "EFFICIENCY", "FLIGHT"};
     private final IEnergyContainerItem resultItem;
     private final int itemMeta;
-    private List<String> unappliedUpgrades = new ArrayList<String>();
+    private String unappliedUpgrade;
 
     public ArmorUpgrade(ItemStack result, Object... recipe)
     {
@@ -51,18 +51,15 @@ public class ArmorUpgrade extends ShapelessOreRecipe
                     if (tagCompound != null)
                         tagCompound.setBoolean(upgrade, true);
                     else
-                        unappliedUpgrades.add(upgrade);
+                        unappliedUpgrade = upgrade;
                 }
             }
         }
 
         if (tagCompound != null)
         {
-            if (!unappliedUpgrades.isEmpty())
-            {
-                for (String upgrade : unappliedUpgrades)
-                    tagCompound.setBoolean(upgrade, true);
-            }
+            if (unappliedUpgrade != null)
+                    tagCompound.setBoolean(unappliedUpgrade, true);
             result.setTagCompound(tagCompound);
         }
 

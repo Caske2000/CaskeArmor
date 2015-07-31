@@ -138,8 +138,7 @@ public class ItemRFArmor extends ItemArmorAdv implements IEnergyContainerItem, I
     @Override
     public String getArmorTexture(ItemStack itemstack, Entity entity, int slot, String type)
     {
-        LogHelper.info(entity.getCommandSenderName() == "Caske2000");
-        if (entity.getCommandSenderName() == "Caske2000" || entity.getCommandSenderName() == "direwolf20" || entity.getCommandSenderName() == "Soaryn")
+        if (entity.getCommandSenderName().equals("Caske2000") || entity.getCommandSenderName().equals("direwolf20") || entity.getCommandSenderName().equals("Soaryn"))
         {
             switch (slot)
             {
