@@ -16,7 +16,7 @@
 /.idea
 /out
 *.iml
-*.imr
+*.ipr
 *.iws
 
 # Misc.
